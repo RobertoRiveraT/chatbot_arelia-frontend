@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: 'chatbotarelia-backend-production.up.railway.app'
 };
