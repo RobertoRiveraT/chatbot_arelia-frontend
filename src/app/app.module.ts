@@ -18,6 +18,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { AccountComponent } from './pages/account/account.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+// import { NbChatModule } from '@nebular/theme';
 
 
 @NgModule({
