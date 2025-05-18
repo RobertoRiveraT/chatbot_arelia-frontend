@@ -42,6 +42,34 @@ login(email: string, password: string): Observable<any> {
     });
 }
 
+updateEmail(newEmail: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http.put(`${BASE_URL}/update-email`, { new_email: newEmail }, {
+    headers: {
+        Authorization: `Bearer ${token}`
+    }
+    });
+}
+
+updatePassword(newPassword: string): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http.put(`${BASE_URL}/update-password`, { new_password: newPassword }, {
+    headers: {
+        Authorization: `Bearer ${token}`
+    }
+    });
+}
+
+deleteAccount(): Observable<any> {
+    const token = localStorage.getItem('token');
+    return this.http.delete(`${BASE_URL}/delete-account`, {
+    headers: {
+        Authorization: `Bearer ${token}`
+    }
+    });
+}
+
+
 // Enviar mensaje al bot
 sendMessage(content: string): Observable<any> {
     const token = localStorage.getItem('token');

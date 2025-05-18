@@ -31,23 +31,51 @@ export class AccountComponent {
 
   updateEmail(): void {
     const { newEmail } = this.emailForm.value;
-    // Lógica API para actualizar email (cuando esté disponible en el backend)
-    this.updateMessage = `Correo actualizado a: ${newEmail}`;
+  
+    this.api.updateEmail(newEmail).subscribe({
+      next: () => {
+        this.updateMessage = `Correo actualizado a: ${newEmail}`;
+        this.errorMessage = null;
+      },
+      error: (err) => {
+        console.error('Error al actualizar correo:', err);
+        this.updateMessage = null;
+        this.errorMessage = err.error.detail || 'Error al actualizar el correo.';
+      }
+    });
   }
-
+  
   updatePassword(): void {
     const { newPassword } = this.passwordForm.value;
-    // Lógica API para actualizar contraseña (cuando esté disponible en el backend)
-    this.updateMessage = 'Contraseña actualizada correctamente.';
-  }
+  
+    this.api.updatePassword(newPassword).subscribe({
+      next: () => {
+        this.updateMessage = 'Contraseña actualizada correctamente.';
+        this.errorMessage = null;
+      },
+      error: (err) => {
+        console.error('Error al actualizar contraseña:', err);
+        this.updateMessage = null;
+        this.errorMessage = err.error.detail || 'Error al actualizar la contraseña.';
+      }
+    });
+  }  
 
   deleteAccount(): void {
     const confirmed = confirm('¿Estás seguro de que quieres eliminar tu cuenta? Esta acción es irreversible.');
     if (!confirmed) return;
-
-    // Lógica API para eliminar cuenta (cuando esté implementada)
-    this.updateMessage = 'Cuenta eliminada.';
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+  
+    this.api.deleteAccount().subscribe({
+      next: () => {
+        this.updateMessage = 'Cuenta eliminada correctamente.';
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+      },
+      error: (err) => {
+        console.error('Error al eliminar cuenta:', err);
+        this.errorMessage = err.error.detail || 'Error al eliminar la cuenta.';
+      }
+    });
   }
+  
 }
