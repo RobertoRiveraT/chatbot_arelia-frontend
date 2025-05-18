@@ -58,9 +58,9 @@ export class ChatComponent implements OnInit {
     this.api.sendMessageToBot(content).subscribe({
       next: (res) => {
         const botMsg: ChatMessage = {
-          sender: 'bot',
-          text: res.response,
-          timestamp: new Date()
+          sender: res.role === 'assistant' ? 'bot' : 'user',
+          text: res.content,
+          timestamp: new Date(res.timestamp)
         };
         this.messages.push(botMsg);
         this.loading = false;
