@@ -19,6 +19,8 @@ import { AccountComponent } from './pages/account/account.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     ChatComponent,
     LoginComponent,
     RegisterComponent,
-    AccountComponent
+    AccountComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
