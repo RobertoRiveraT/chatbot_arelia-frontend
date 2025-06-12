@@ -57,7 +57,7 @@
                   "with": "src/environments/environment.qastaging.ts"
                 }
               ],
-              "baseHref": "/qa-page/",
+              "baseHref": "/frontend-rrt-portfolio-webpage/",
               "outputPath": "dist/qa-staging",
               "optimization": true,
               "outputHashing": "all",
