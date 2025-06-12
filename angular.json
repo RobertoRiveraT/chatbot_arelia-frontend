@@ -57,6 +57,7 @@
                   "with": "src/environments/environment.qastaging.ts"
                 }
               ],
+              "baseHref": "/qa-page/",
               "outputPath": "dist/qa-staging",
               "optimization": true,
               "outputHashing": "all",

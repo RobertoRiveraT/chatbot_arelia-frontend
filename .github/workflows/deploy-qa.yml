@@ -1,0 +1,31 @@
+name: Deploy QA to GitHub Pages
+
+on:
+  push:
+    branches:
+      - qa-staging
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Angular app
+      run: npm run build -- --configuration=qa-staging
+
+    - name: Deploy to GitHub Pages (qa-page)
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: qa-page
+        folder: dist/frontend-webpage
