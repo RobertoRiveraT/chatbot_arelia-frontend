@@ -1,0 +1,1 @@
+window.__env = { baseUrl: 'https://backend-repo-qa-staging.up.railway.app' };
