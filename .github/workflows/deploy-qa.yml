@@ -28,4 +28,4 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: qa-page
-        folder: dist/frontend-webpage
+        folder: dist/qa-staging
