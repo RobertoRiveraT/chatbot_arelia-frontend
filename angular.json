@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "chatbot_arelia-frontend": {
+    "frontend-webpage": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/chatbot_arelia-frontend",
+            "outputPath": "dist/frontend-webpage",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,6 +50,23 @@
               ],
               "outputHashing": "all"
             },
+            "qa-staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qastaging.ts"
+                }
+              ],
+              "outputPath": "dist/qa-staging",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -65,10 +82,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "chatbot_arelia-frontend:build:production"
+              "browserTarget": "frontend-webpage:build:production"
             },
             "development": {
-              "browserTarget": "chatbot_arelia-frontend:build:development"
+              "browserTarget": "frontend-webpage:build:development"
+            },
+            "qa-staging": {
+              "browserTarget": "frontend-webpage:build:qa-staging"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +96,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "chatbot_arelia-frontend:build"
+            "browserTarget": "frontend-webpage:build"
           }
         },
         "test": {
@@ -96,6 +116,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
