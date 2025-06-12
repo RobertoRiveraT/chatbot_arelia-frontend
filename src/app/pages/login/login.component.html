@@ -1,0 +1,35 @@
+<mat-card style="max-width: 400px; margin: auto; margin-top: 100px;">
+    <h2>Iniciar sesión</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Correo electrónico</mat-label>
+            <input matInput formControlName="email" type="email" />
+            <mat-error *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                Correo inválido
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="password" type="password" />
+            <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                Contraseña requerida
+            </mat-error>
+        </mat-form-field>
+
+        <div *ngIf="loginError" style="color: red; margin-bottom: 10px;">
+            {{ loginError }}
+        </div>
+
+        <div class="full-width" style="margin-top: 16px;">
+            <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="loading || loginForm.invalid">
+                {{ loading ? 'Ingresando...' : 'Iniciar sesión' }}
+            </button>
+        </div>
+    </form>
+
+    <div style="margin-top: 16px; text-align: center;">
+    <button mat-button color="accent" (click)="goToRegister()">¿No tienes cuenta? Regístrate</button>
+    </div>
+</mat-card>
