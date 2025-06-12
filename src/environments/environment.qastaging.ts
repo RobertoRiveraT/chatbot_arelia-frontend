@@ -1,4 +1,7 @@
+declare let window: any;
+
 export const environment = {
     production: true,
-    baseUrl: 'https://backend-repo-qa-staging.up.railway.app'
+    baseUrl: window.__env?.baseUrl
+    || 'https://backend-repo-qa-staging.up.railway.app'
 };
