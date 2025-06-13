@@ -1,21 +1,18 @@
-.aboutme-container {
-  display: inline-block; /* Se ajusta al contenido */
-  background-color: #dceeff; /* Azul claro pastel */
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  margin: 4rem auto;
+.main-wrapper {
+    background-color: #dcf8ff;
+    position: relative;
+    min-height: 100dvh;
+    width: 100%;
 }
 
 :host {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
-
 
 .hero {
     text-align: center;
-    margin: 2rem auto;
+    margin: 2rem auto 2rem;
 }
 
 .hero h1 {
@@ -48,4 +45,49 @@
     padding: 1rem;
     background: #f9f9f9;
     border-radius: 12px;
+}
+
+.about-text {
+    min-width: 280px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.about-photo {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;    /* centra horizontalmente */
+    align-items: center;        /* centra verticalmente */
+    height: 100%;               /* asegura que ocupe todo el alto de la fila */
+}
+
+.about-photo img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;  /* mantiene las columnas a la misma altura */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+    /*min-height: 600px;      🔧 Ajusta según sea necesario */
+}
+
+.about-left {
+    flex: 2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }

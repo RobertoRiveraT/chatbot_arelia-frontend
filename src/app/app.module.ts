@@ -23,6 +23,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutmeComponent } from './pages/aboutme/aboutme.component';
+import { MyworkComponent } from './pages/mywork/mywork.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AboutmeComponent } from './pages/aboutme/aboutme.component';
     AccountComponent,
     HeaderComponent,
     HomeComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    MyworkComponent
   ],
   imports: [
     BrowserModule,
