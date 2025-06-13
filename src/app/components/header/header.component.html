@@ -1,27 +1,26 @@
-<mat-toolbar class="toolbar-centered">
-    <img
-    src="assets/img/icon.png"
-    alt="Logo"
-    width="32"
-    height="32"
-    style="margin-right: 12px; cursor: pointer;"
-    (click)="goHome()"
-    />
+<aside class="sidebar">
+    <!-- Container for logo + nav + social -->
+    <div class="sidebar-content">
+        <!-- Logo / Home -->
+        <div class="logo" (click)="goHome()">
+            <img src="assets/img/icon.png" alt="Logo" />
+        </div>
 
-    <span class="spacer"></span>
+        <!-- Navigation -->
+        <nav class="nav">
+            <a routerLink="/portfolio" routerLinkActive="active">WORK</a>
+            <a routerLink="/aboutme" routerLinkActive="active">ABOUT ME</a>
+            <a routerLink="/contact" routerLinkActive="active">CONTACT</a>
+        </nav>
 
-    <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>menu</mat-icon>
-    </button>
-
-    <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="goToAccount()">
-        <mat-icon>person</mat-icon>
-        <span>Cuenta</span>
-    </button>
-    <button mat-menu-item (click)="logout()">
-        <mat-icon>logout</mat-icon>
-        <span>Cerrar sesión</span>
-    </button>
-    </mat-menu>
-</mat-toolbar>
+        <!-- Social icons -->
+        <div class="social">
+            <a href="https://github.com/tuusuario" target="_blank" aria-label="GitHub">
+            <mat-icon>code</mat-icon>
+            </a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank" aria-label="LinkedIn">
+            <mat-icon>business</mat-icon>
+            </a>
+        </div>
+    </div>
+</aside>

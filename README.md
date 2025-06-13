@@ -1,6 +1,6 @@
 # Frontend - Webpage Portfolio (Angular)
 
-This project is the frontend for the portfolio webpage, previously known as `chatbot_arelia-frontend`. It is built with Angular and automatically deployed to QA and production environments via Vercel.
+This project is the frontend for the portfolio webpage, previously known as `RRT Portfolio Webpage`. It is built with Angular and automatically deployed to QA and production environments via Vercel.
 
 ---
 

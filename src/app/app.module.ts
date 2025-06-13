@@ -21,6 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { HeaderComponent } from './components/header/header.component';
     LoginComponent,
     RegisterComponent,
     AccountComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    AboutmeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,72 @@
-.toolbar-centered {
+.sidebar-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 0 16px;
-    background-color: #d3d3d3;
-    color: white;
+    margin-top: 4rem; /* ajusta según lo que necesites */
 }
 
-.spacer {
-    flex: 1;
-}  
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh; /* Same as app.component.css -> margin-left*/
+    background-color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    color: white;
+    z-index: 1000;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+/* nav ajustado hacia arriba */
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    margin-top: 0rem;
+    margin-bottom: 3rem; /* esto agrega espacio antes de los íconos */
+}
+
+.nav a {
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+    font-weight: 300; /* super delgado */
+    letter-spacing: 0.075em; /* más espacio entre letras */
+    color: #1ad8fa;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: rgb(38, 0, 255)
+}
+
+/* social ahora ligeramente elevado pero fijo al fondo visual */
+.social {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social a {
+  color: #1ad8fa;
+  font-size: 1.6rem;
+  transition: color 0.2s;
+}
+
+.social a:hover {
+  color: rgb(38, 0, 255)
+}

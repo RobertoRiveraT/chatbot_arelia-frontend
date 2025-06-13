@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'chatbot_arelia-frontend';
+  title = 'RRT Portfolio Webpage';
 
   constructor(private router: Router) {}
 
@@ -16,7 +16,7 @@ export class AppComponent {
     if (token) {
       this.router.navigate(['/chat']);
     } else {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/home']);
     }
   }
 }
