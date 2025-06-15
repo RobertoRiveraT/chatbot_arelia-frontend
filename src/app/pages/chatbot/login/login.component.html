@@ -43,4 +43,20 @@
     <button mat-raised-button color="warn" class="pulse-button" (click)="acceptWarning()">I understand</button>
     </div>
 </mat-card>
+<!-- TUTORIAL BOX -->
+<div class="tutorial-box fade-in">
+    <h3 style="font-size: 1.8rem; font-weight: 800;">Tutorial - Step 1: Logging In</h3>
+    <p style="font-size: 0.9rem;">
+        When a user submits their credentials, the application sends a <strong>POST</strong> request to the 
+        <code><strong>/login</strong></code> endpoint from the FastAPI backend.
+        If the credentials are valid, the backend responds with a JSON Web Token <strong>(JWT)</strong>, 
+        which is stored in the browser's <strong><code>localStorage</code></strong>.
+    </p>
+    <p style="font-size: 0.9rem;">
+        This token is then used for authenticated actions across the site. For example, if 
+        a user visits <strong><code>/chatbot</code></strong>, the app checks if a token exists. If so, they're redirected 
+        to <strong><code>/chatbot/chat</code></strong>. Otherwise, they go to <strong><code>/chatbot/login</code></strong>.
+    </p>
+    <button class="next-step-btn" (click)="goToNextStep()">Next Step →</button>
+</div>
 </div>

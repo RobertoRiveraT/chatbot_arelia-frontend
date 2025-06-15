@@ -53,4 +53,8 @@ export class LoginComponent {
     this.showWarning = false;
   }
 
+  goToNextStep(): void {
+    this.router.navigate(['/chatbot/register']);
+  }
+
 }

@@ -42,4 +42,15 @@ export class RegisterComponent {
       }
     });
   }
+
+  goToNextStep(): void {
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.router.navigate(['/chatbot/chat']);
+    } else {
+      alert('You need to create an account or log in before continuing to the next step.');
+      this.router.navigate(['/chatbot/login']);
+    }
+  }
+
 }

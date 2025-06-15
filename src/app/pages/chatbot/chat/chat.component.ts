@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
 
 interface ChatMessage {
   sender: 'user' | 'bot';
@@ -19,7 +20,10 @@ export class ChatComponent implements OnInit {
 
   @ViewChild('scrollMe') private chatContainer!: ElementRef;
 
-  constructor(private api: ApiService) {}
+  constructor(
+    private api: ApiService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadMessages();
@@ -78,6 +82,16 @@ export class ChatComponent implements OnInit {
       this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
     } catch (err) {
       console.error('Scroll failed:', err);
+    }
+  }
+
+  goToNextStep(): void {
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.router.navigate(['/chatbot/account']);
+    } else {
+      alert('You need to create an account or log in before continuing to the next step.');
+      this.router.navigate(['/chatbot/login']);
     }
   }
 }

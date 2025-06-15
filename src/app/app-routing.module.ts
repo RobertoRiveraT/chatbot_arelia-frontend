@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ChatComponent } from './pages/chatbot/chat/chat.component';
 import { RegisterComponent } from './pages/chatbot/register/register.component';
-import { AccountComponent } from './pages/account/account.component';
+import { AccountComponent } from './pages/chatbot/account/account.component';
 import { HomeComponent  } from './pages/home/home.component';
 import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { MyworkComponent } from './pages/mywork/mywork.component';
@@ -14,7 +14,6 @@ import { LoginComponent } from './pages/chatbot/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'account', component: AccountComponent },
   { path: 'home', component: HomeComponent },
   { path: 'aboutme', component: AboutmeComponent },
   { path: 'mywork', component: MyworkComponent },
@@ -22,6 +21,7 @@ const routes: Routes = [
   { path: 'chatbot', component: ChatbotRedirectComponent },
   { path: 'chatbot/login', component: LoginComponent },
   { path: 'chatbot/register', component: RegisterComponent },
+  { path: 'chatbot/account', component: AccountComponent },
   { path: 'chatbot/chat', component: ChatComponent }
 ];
 

@@ -15,7 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterComponent } from './pages/chatbot/register/register.component';
-import { AccountComponent } from './pages/account/account.component';
+import { AccountComponent } from './pages/chatbot/account/account.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
