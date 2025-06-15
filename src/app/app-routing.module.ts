@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from './pages/login/login.component';
-import { ChatComponent } from './pages/chat/chat.component';
-import { RegisterComponent } from './pages/register/register.component';
+import { ChatComponent } from './pages/chatbot/chat/chat.component';
+import { RegisterComponent } from './pages/chatbot/register/register.component';
 import { AccountComponent } from './pages/account/account.component';
 import { HomeComponent  } from './pages/home/home.component';
 import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { MyworkComponent } from './pages/mywork/mywork.component';
+import { ContactComponent } from './pages/contact/contact.component';
+
+import { ChatbotRedirectComponent } from './pages/chatbot/chatbot-redirect.component';
+import { LoginComponent } from './pages/chatbot/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
   { path: 'account', component: AccountComponent },
-  { path: 'chat', component: ChatComponent },
   { path: 'home', component: HomeComponent },
   { path: 'aboutme', component: AboutmeComponent },
   { path: 'mywork', component: MyworkComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'chatbot', component: ChatbotRedirectComponent },
+  { path: 'chatbot/login', component: LoginComponent },
+  { path: 'chatbot/register', component: RegisterComponent },
+  { path: 'chatbot/chat', component: ChatComponent }
 ];
 
 @NgModule({

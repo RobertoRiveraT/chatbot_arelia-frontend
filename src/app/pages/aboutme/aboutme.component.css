@@ -71,6 +71,17 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 .about-layout {
     display: flex;
     flex-direction: row;
@@ -89,5 +100,32 @@
     min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
+}
+
+.brand-section {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.brand-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #1ad8fa;
+}
+
+.brand-link {
+    display: inline-block;
+}
+
+.brand-logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.2);
+    cursor: pointer;
 }

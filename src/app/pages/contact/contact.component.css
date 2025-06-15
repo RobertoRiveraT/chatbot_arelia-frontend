@@ -1,0 +1,92 @@
+.main-wrapper {
+    background-color: #dcf8ff;
+    position: relative;
+    min-height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;    /* centra horizontalmente */
+    align-items: center;        /* centra verticalmente */
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    text-align: center;
+    margin: 10rem auto 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+}
+
+.contact-section {
+    max-width: 700px;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.social a {
+    color: #1ad8fa;
+    font-size: 1.6rem;
+    transition: color 0.2s;
+}
+
+.social a:hover {
+    color: rgb(38, 0, 255)
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: #1ad8fa; /* color base */
+    transition: fill 0.3s ease;
+    margin: 0.5rem;
+}
+
+.icon-link:hover .social-icon {
+    fill: rgb(38, 0, 255); /* color al hacer hover */
+}

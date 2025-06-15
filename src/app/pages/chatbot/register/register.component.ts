@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ApiService } from '../../services/api.service';
+import { ApiService } from '../../../services/api.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -34,7 +34,7 @@ export class RegisterComponent {
     this.api.register(email, password).subscribe({
       next: () => {
         this.loading = false;
-        this.router.navigate(['/login']); // o /chat si prefieres
+        this.router.navigate(['chatbot/chat']);
       },
       error: (err) => {
         this.loading = false;
