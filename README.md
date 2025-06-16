@@ -1,6 +1,6 @@
 # Frontend - Webpage Portfolio (Angular)
 
-This project is the frontend for the portfolio webpage, previously known as `RRT Portfolio Webpage`. It is built with Angular and automatically deployed to QA and production environments via Vercel.
+This project is the frontend for the portfolio webpage. It is built with Angular and automatically deployed to QA and production environments via Github and Vercel.
 
 ---
 
@@ -25,8 +25,8 @@ frontend-webpage/
 
 | Environment | URL                                                                 |
 |-------------|---------------------------------------------------------------------|
-| Production  | [https://chatbot-arelia-frontend.vercel.app](https://chatbot-arelia-frontend.vercel.app) |
-| QA-Staging  | [https://frontend-webpage-qa.vercel.app](https://frontend-webpage-qa.vercel.app)         |
+| Production  | [Production webpage](https://chatbot-arelia-frontend.vercel.app) |
+| QA-Staging  | [QA Webpage](https://frontend-webpage-qa.vercel.app)         |
 
 ---
 
@@ -36,9 +36,9 @@ This frontend uses dynamic environment variable generation to avoid hardcoding b
 
 ### Used Variables
 
-| Variable           | Purpose                            |
-|--------------------|-------------------------------------|
-| `NG_APP_BASE_URL`  | Backend URL depending on environment |
+| Variable           | Purpose                              |
+|--------------------|--------------------------------------|
+| `BASE_URL`         | Backend URL depending on environment |
 
 ### Generated File
 
@@ -48,10 +48,10 @@ This frontend uses dynamic environment variable generation to avoid hardcoding b
 
 ```env
 # .env (production)
-NG_APP_BASE_URL=https://chatbotarelia-backend-production.up.railway.app
+BASE_URL=https://producton.backend.url
 
 # .env.staging (QA)
-NG_APP_BASE_URL=https://backend-repo-qa-staging.up.railway.app
+BASE_URL=https://qa-staging.backend.url
 ```
 
 > 🔒 These files are ignored by Git and must be set manually for local and Vercel environments.
@@ -122,6 +122,6 @@ No unit tests yet, but Karma and Jasmine integration is planned.
 ## 🧾 Credits
 
 Managed by [Roberto Rivera](https://github.com/RobertoRiveraT)  
-Part of the full stack project [Chatbot Arelia](https://github.com/RobertoRiveraT/chatbot_arelia-backend)
+Part of the full stack project [See the Backend](https://github.com/RobertoRiveraT/backend-rrt-portfolio-webpage)
 
 ---

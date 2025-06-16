@@ -4,33 +4,60 @@
     <p>A showcase of projects, certifications, and relevant milestones in my career.</p>
 </section>
 
-<div class="content-wrapper">
-    <!-- Filter Sidebar -->
-    <aside class="filter-panel">
-        <h3>Filter by Category</h3>
+<!-- Filter Sidebar -->
+<aside class="filter-panel">
+    <h3>Filter by Category</h3>
+    <div class="filter-buttons">
         <button class="filter-btn" (click)="filterCategory('All')">All</button>
         <button class="filter-btn" (click)="filterCategory('Projects')">Projects</button>
         <button class="filter-btn" (click)="filterCategory('Certifications')">Certifications</button>
-    </aside>
+    </div>
+</aside>
 
+<div class="cv-cards-wrapper">
     <!-- Work Cards Container -->
     <section class="work-cards">
-        <div *ngFor="let item of filteredItems" class="work-card" 
-            [ngClass]="{
-                'project-card': item.type === 'Projects',
-                'certification-card': item.type === 'Certifications'
-            }">
-            <span class="date-label">{{ item.startDate }} – {{ item.endDate || 'Present' }}</span>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>
-            <ul>
-                <li *ngFor="let bullet of item.bullets">{{ bullet }}</li>
-            </ul>
-            <div class="card-footer">
-                <a *ngIf="item.link" [href]="item.link" target="_blank" class="cta">View</a>
-                <img [src]="item.thumbnail" alt="thumbnail" class="thumbnail" />
-            </div>
+    <div *ngFor="let item of filteredItems" class="work-card" 
+        [ngClass]="{
+            'project-card': item.category === 'Projects',
+            'certification-card': item.category === 'Certifications'
+        }">
+        
+        <!-- Date label -->
+        <span class="date-label">{{ item.startDate }} – {{ item.endDate || 'Present' }}</span>
+
+        <!-- Title -->
+        <h3 class="card-title">{{ item.title }}</h3>
+
+        <!-- Description with bold tech keywords -->
+        <p [innerHTML]="item.description"></p>
+
+        <!-- Bullet points -->
+        <ul>
+            <li *ngFor="let bullet of item.bullets" [innerHTML]="bullet"></li>
+        </ul>
+
+        <!-- Read More section -->
+        <div class="read-more-text" *ngIf="item.readMoreOpen">
+        <p [innerHTML]="item.readMoreText"></p>
         </div>
+
+        <!-- Footer: buttons left, thumbnail right -->
+        <div class="card-footer">
+            <div class="card-buttons">
+                <a *ngIf="item.link" [href]="item.link" target="_blank" class="card-btn">View</a>
+
+                <button *ngIf="item.readMoreText && item.readMoreText.trim().length > 0"
+                        class="card-btn yellow" 
+                        (click)="toggleReadMore(item)">
+                <span *ngIf="!item.readMoreOpen">Read More ▼</span>
+                <span *ngIf="item.readMoreOpen">Show Less ▲</span>
+                </button>
+            </div>
+
+            <img [src]="item.thumbnail" alt="thumbnail" class="thumbnail" />
+        </div>
+    </div>
     </section>
 
 </div>
