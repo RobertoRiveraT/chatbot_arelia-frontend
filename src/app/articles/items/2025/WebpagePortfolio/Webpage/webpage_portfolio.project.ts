@@ -1,4 +1,4 @@
-import { WorkItem } from '../work-item.interface';
+import { WorkItem } from '../../../../work-item.interface';
 
 export const WebpagePortfolioProject: WorkItem = {
     title: 'Personal Portfolio Website',

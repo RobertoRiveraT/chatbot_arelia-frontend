@@ -1,4 +1,4 @@
-import { WorkItem } from '../work-item.interface';
+import { WorkItem } from '../../../../work-item.interface';
 
 export const WebpageChatbotDemoProject: WorkItem = {
     title: 'Realtime Web Chatbot',

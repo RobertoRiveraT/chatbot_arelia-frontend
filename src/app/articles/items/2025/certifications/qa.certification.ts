@@ -1,4 +1,4 @@
-import { WorkItem } from '../work-item.interface';
+import { WorkItem } from '../../../work-item.interface';
 
 export const QaCertification: WorkItem = {
     title: 'QA Testing & Automation (Java)',

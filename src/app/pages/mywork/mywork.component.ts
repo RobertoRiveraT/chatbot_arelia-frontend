@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { workItems } from '../../components/work-card/articles/work-items';
+import { workItems } from '../../articles/work-items';
 
 @Component({
   selector: 'app-mywork',
