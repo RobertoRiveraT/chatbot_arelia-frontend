@@ -50,11 +50,11 @@ export class AccountComponent {
   
     this.api.updatePassword(newPassword).subscribe({
       next: () => {
-        this.updateMessage = 'Contraseña actualizada correctamente.';
+        this.updateMessage = 'Password updated successfully';
         this.errorMessage = null;
       },
       error: (err) => {
-        console.error('Error al actualizar contraseña:', err);
+        console.error('Error updating password:', err);
         this.updateMessage = null;
         this.errorMessage = err.error.detail || 'Error al actualizar la contraseña.';
       }
@@ -62,20 +62,30 @@ export class AccountComponent {
   }  
 
   deleteAccount(): void {
-    const confirmed = confirm('¿Estás seguro de que quieres eliminar tu cuenta? Esta acción es irreversible.');
+    const confirmed = confirm('Are you sure you want to delete your account? This action is irreversible.');
     if (!confirmed) return;
   
     this.api.deleteAccount().subscribe({
       next: () => {
-        this.updateMessage = 'Cuenta eliminada correctamente.';
+        this.updateMessage = 'Account deleted successfully.';
         localStorage.removeItem('token');
         this.router.navigate(['/login']);
       },
       error: (err) => {
-        console.error('Error al eliminar cuenta:', err);
+        console.error('Error deleting account:', err);
         this.errorMessage = err.error.detail || 'Error al eliminar la cuenta.';
       }
     });
+  }
+
+  goToNextStep(): void {
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.router.navigate(['/chatbot/chat']);
+    } else {
+      alert('You need to create an account or log in before continuing to the next step.');
+      this.router.navigate(['/chatbot/login']);
+    }
   }
   
 }

@@ -1,31 +1,26 @@
+/* === Layout & Containers === */
 .main-wrapper {
     background-color: #dcf8ff;
     position: relative;
     min-height: 100dvh;
     width: 100%;
+    padding-top: 5rem; /* nuevo */
 }
 
-
-/*
-.main-wrapper {
-    display: inline-block;
-    background-color: #dceeff;
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    margin: 4rem auto;
-}
-*/
-
-:host {
+.content-wrapper {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    text-align: left;
 }
 
-
+/* === Hero Section === */
 .hero {
     text-align: center;
-    margin: 10rem auto 2rem;
+    margin: 0 auto 2rem;
 }
 
 .hero h1 {
@@ -38,24 +33,137 @@
     margin-bottom: 1rem;
 }
 
-.cta {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: #007bff;
+/* === Filter Panel === */
+.filter-panel {
+    min-width: 200px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.filter-btn {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    border: none;
+    background-color: #1ad8fa;
     color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #007fff;
+}
+
+/* === Work Cards === */
+.work-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+.work-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card {
+    background-color: #e8f5e9;
+    border-left: 6px solid #4caf50;
+}
+
+.certification-card {
+    background-color: #e3f2fd;
+    border-left: 6px solid #2196f3;
+}
+
+.date-label {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: bold;
+}
+
+/* === Typography === */
+.work-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem;
+}
+
+.work-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.work-card ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+}
+
+/* === Footer with CTA & Thumbnail === */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.cta {
+    background-color: #1ad8fa;
+    color: white;
+    border: none;
     border-radius: 8px;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(26, 216, 250, 0.4);
 }
 
 .cta:hover {
-    background-color: #0056b3;
+    background-color: #007fff;
+    transform: scale(1.05);
 }
 
-.about-site, .tutorial {
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #f9f9f9;
-    border-radius: 12px;
+.thumbnail {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* === Animations === */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
 }

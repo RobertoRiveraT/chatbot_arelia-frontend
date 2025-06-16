@@ -1,16 +1,37 @@
 <div class="main-wrapper">
-    <section class="about-site">
-        <h2>What is this website?</h2>
-        <p>This is more than just a static portfolio — here, you can log in, try a custom-built chatbot, and see how I handle real user sessions, data management, and API integration.</p>
+<section class="hero">
+    <h1>My Work & Experience</h1>
+    <p>A showcase of projects, certifications, and relevant milestones in my career.</p>
+</section>
+
+<div class="content-wrapper">
+    <!-- Filter Sidebar -->
+    <aside class="filter-panel">
+        <h3>Filter by Category</h3>
+        <button class="filter-btn" (click)="filterCategory('All')">All</button>
+        <button class="filter-btn" (click)="filterCategory('Projects')">Projects</button>
+        <button class="filter-btn" (click)="filterCategory('Certifications')">Certifications</button>
+    </aside>
+
+    <!-- Work Cards Container -->
+    <section class="work-cards">
+        <div *ngFor="let item of filteredItems" class="work-card" 
+            [ngClass]="{
+                'project-card': item.type === 'Projects',
+                'certification-card': item.type === 'Certifications'
+            }">
+            <span class="date-label">{{ item.startDate }} – {{ item.endDate || 'Present' }}</span>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <ul>
+                <li *ngFor="let bullet of item.bullets">{{ bullet }}</li>
+            </ul>
+            <div class="card-footer">
+                <a *ngIf="item.link" [href]="item.link" target="_blank" class="cta">View</a>
+                <img [src]="item.thumbnail" alt="thumbnail" class="thumbnail" />
+            </div>
+        </div>
     </section>
 
-    <section class="tutorial">
-        <h2>Quick Tour ✨</h2>
-        <ul>
-        <li>✅ Visit <strong>/portfolio</strong> to explore my past projects</li>
-        <li>🔐 Go to <strong>/login</strong> to create a test account</li>
-        <li>💬 Try the <strong>/chat</strong> page to interact with the chatbot</li>
-        <li>👤 Check your profile and message history at <strong>/account</strong></li>
-        </ul>
-    </section>
+</div>
 </div>
