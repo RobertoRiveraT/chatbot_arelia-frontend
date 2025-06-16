@@ -26,6 +26,7 @@ import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { MyworkComponent } from './pages/mywork/mywork.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ChatbotRedirectComponent } from './pages/chatbot/chatbot-redirect.component';
+import { WorkCardComponent } from './components/work-card/work-card.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ChatbotRedirectComponent } from './pages/chatbot/chatbot-redirect.compo
     AboutmeComponent,
     MyworkComponent,
     ContactComponent,
-    ChatbotRedirectComponent
+    ChatbotRedirectComponent,
+    WorkCardComponent
   ],
   imports: [
     BrowserModule,

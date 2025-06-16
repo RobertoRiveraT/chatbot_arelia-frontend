@@ -17,47 +17,18 @@
 <div class="cv-cards-wrapper">
     <!-- Work Cards Container -->
     <section class="work-cards">
-    <div *ngFor="let item of filteredItems" class="work-card" 
-        [ngClass]="{
-            'project-card': item.category === 'Projects',
-            'certification-card': item.category === 'Certifications'
-        }">
-        
-        <!-- Date label -->
-        <span class="date-label">{{ item.startDate }} – {{ item.endDate || 'Present' }}</span>
-
-        <!-- Title -->
-        <h3 class="card-title">{{ item.title }}</h3>
-
-        <!-- Description with bold tech keywords -->
-        <p [innerHTML]="item.description"></p>
-
-        <!-- Bullet points -->
-        <ul>
-            <li *ngFor="let bullet of item.bullets" [innerHTML]="bullet"></li>
-        </ul>
-
-        <!-- Read More section -->
-        <div class="read-more-text" *ngIf="item.readMoreOpen">
-        <p [innerHTML]="item.readMoreText"></p>
-        </div>
-
-        <!-- Footer: buttons left, thumbnail right -->
-        <div class="card-footer">
-            <div class="card-buttons">
-                <a *ngIf="item.link" [href]="item.link" target="_blank" class="card-btn">View</a>
-
-                <button *ngIf="item.readMoreText && item.readMoreText.trim().length > 0"
-                        class="card-btn yellow" 
-                        (click)="toggleReadMore(item)">
-                <span *ngIf="!item.readMoreOpen">Read More ▼</span>
-                <span *ngIf="item.readMoreOpen">Show Less ▲</span>
-                </button>
-            </div>
-
-            <img [src]="item.thumbnail" alt="thumbnail" class="thumbnail" />
-        </div>
-    </div>
+        <app-work-card
+            *ngFor="let item of filteredItems"
+            [title]="item.title"
+            [description]="item.description"
+            [bullets]="item.bullets"
+            [readMoreText]="item.readMoreText"
+            [link]="item.link"
+            [thumbnail]="item.thumbnail"
+            [startDate]="item.startDate"
+            [endDate]="item.endDate"
+            [category]="item.category"
+        ></app-work-card>
     </section>
 
 </div>
