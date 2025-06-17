@@ -21,4 +21,15 @@ export class WorkCardComponent {
   toggleReadMore(): void {
     this.readMoreOpen = !this.readMoreOpen;
   }
+
+  isModalOpen = false;
+
+  openImageModal(): void {
+    this.isModalOpen = true;
+  }
+
+  closeImageModal(): void {
+    this.isModalOpen = false;
+  }
+
 }

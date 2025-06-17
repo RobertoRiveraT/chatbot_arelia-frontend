@@ -15,6 +15,19 @@
         <button *ngIf="readMoreText" class="card-btn yellow" (click)="toggleReadMore()">
             {{ readMoreOpen ? 'Read Less ▲' : 'Read More ▼' }}
         </button>
-        <img *ngIf="thumbnail" [src]="thumbnail" alt="thumbnail" class="thumbnail" />
+
+        <!-- Imagen miniatura -->
+        <img
+        *ngIf="thumbnail"
+        [src]="thumbnail"
+        alt="thumbnail"
+        class="thumbnail"
+        (click)="openImageModal()" />
     </div>
+</div>
+
+<!-- Modal de imagen ampliada -->
+<div class="image-modal" *ngIf="isModalOpen" (click)="closeImageModal()">
+    <img [src]="thumbnail" alt="Expanded thumbnail" class="modal-image" />
+    <span class="close-btn" (click)="closeImageModal()">x</span>
 </div>

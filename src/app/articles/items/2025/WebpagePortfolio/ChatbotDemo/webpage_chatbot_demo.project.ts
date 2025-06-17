@@ -3,8 +3,8 @@ import { WorkItem } from '../../../../work-item.interface';
 export const WebpageChatbotDemoProject: WorkItem = {
     title: 'Realtime Web Chatbot',
     category: 'Projects',
-    startDate: '2024-01',
-    endDate: '2024-04',
+    startDate: '2024-05',
+    endDate: '2024-05',
     description: 
     'Designed and deployed a fullstack chatbot demo using <strong>Angular</strong>, <strong>FastAPI</strong>, <strong>PostgreSQL</strong> and <strong>OpenAI</strong>.',
     readMoreText: 

@@ -27,6 +27,10 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadMessages();
+    const token = localStorage.getItem('token');
+    if (!token) {
+      this.router.navigate(['/chatbot/login']);
+    }
   }
 
   loadMessages(): void {
