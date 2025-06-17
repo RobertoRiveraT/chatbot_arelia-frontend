@@ -11,13 +11,16 @@ import { ChatComponent } from './pages/chatbot/chat/chat.component';
 import { LoginComponent } from './pages/chatbot/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
 import { RegisterComponent } from './pages/chatbot/register/register.component';
 import { AccountComponent } from './pages/chatbot/account/account.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+
 import { FormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { HeaderComponent } from './components/header/header.component';
@@ -27,6 +30,8 @@ import { MyworkComponent } from './pages/mywork/mywork.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ChatbotRedirectComponent } from './pages/chatbot/chatbot-redirect.component';
 import { WorkCardComponent } from './components/work-card/work-card.component';
+import { UnityPlatformerComponent } from './pages/games/unity-platformer/unity-platformer.component';
+import { PenguinTwitchBattleComponent } from './pages/games/penguin-twitch-battle/penguin-twitch-battle.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,9 @@ import { WorkCardComponent } from './components/work-card/work-card.component';
     MyworkComponent,
     ContactComponent,
     ChatbotRedirectComponent,
-    WorkCardComponent
+    WorkCardComponent,
+    UnityPlatformerComponent,
+    PenguinTwitchBattleComponent
   ],
   imports: [
     BrowserModule,

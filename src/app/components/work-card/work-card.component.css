@@ -201,6 +201,7 @@
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s ease;
     box-shadow: 0 0 10px rgba(26, 216, 250, 0.4);
+    text-decoration: none;
 }
 
 .card-btn:hover {
