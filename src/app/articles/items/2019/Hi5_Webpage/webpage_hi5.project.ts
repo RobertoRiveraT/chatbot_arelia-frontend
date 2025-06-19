@@ -2,7 +2,8 @@ import { WorkItem } from '../../../work-item.interface';
 
 export const Hi5WebsiteProject: WorkItem = {
     title: 'Hi5 Website Project',
-    category: 'Projects',
+    category: ['Projects'],
+    cardColor: 'blue',
     startDate: '2019-03',
     endDate: '2019-03',
     description: 

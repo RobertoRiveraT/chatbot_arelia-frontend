@@ -2,7 +2,8 @@ import { WorkItem } from '../../../work-item.interface';
 
 export const QaCertification: WorkItem = {
     title: 'QA Testing & Automation (Java)',
-    category: 'Certifications',
+    category: ['Certifications'],
+    cardColor: 'green',
     startDate: '2023-02',
     endDate: '',
     description: 

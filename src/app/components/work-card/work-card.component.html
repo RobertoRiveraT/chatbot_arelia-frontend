@@ -1,5 +1,5 @@
-<div class="work-card"
-    [ngClass]="{ 'project-card': category === 'Projects', 'certification-card': category === 'Certifications' }">
+<div class="work-card" [ngClass]="cardColor">
+
     <span class="date-label">{{ startDate }} to {{ endDate || 'Present' }}</span>
     <h3 [innerHTML]="title"></h3>
     <p [innerHTML]="description"></p>

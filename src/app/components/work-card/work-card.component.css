@@ -145,12 +145,12 @@
     transform: translateY(-5px);
 }
 
-.certification-card {
+.green  {
     background-color: #e8f5e9;
     border-left: 6px solid #4caf50;
 }
 
-.project-card {
+.blue  {
     background-color: #e3f2fd;
     border-left: 6px solid #2196f3;
 }

@@ -2,7 +2,8 @@ import { WorkItem } from '../../../../work-item.interface';
 
 export const WebpageChatbotDemoProject: WorkItem = {
     title: 'Realtime Web Chatbot',
-    category: 'Projects',
+    category: ['Projects'],
+    cardColor: 'blue',
     startDate: '2024-05',
     endDate: '2024-05',
     description: 

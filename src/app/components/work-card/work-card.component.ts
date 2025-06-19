@@ -14,7 +14,8 @@ export class WorkCardComponent {
   @Input() thumbnail?: string;
   @Input() startDate!: string;
   @Input() endDate?: string;
-  @Input() category!: string;
+  @Input() category!: string[]; 
+  @Input() cardColor!: 'blue' | 'green';
 
   readMoreOpen = false;
 

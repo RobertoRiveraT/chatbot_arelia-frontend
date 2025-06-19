@@ -2,7 +2,8 @@ import { WorkItem } from '../../../work-item.interface';
 
 export const UnityPlatformerK: WorkItem = {
     title: 'Unity 2D Platformer',
-    category: 'Projects',
+    category: ['Projects'],
+    cardColor: 'blue',
     startDate: '2020-03',
     endDate: '2020-05',
     description:

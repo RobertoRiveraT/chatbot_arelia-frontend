@@ -1,6 +1,9 @@
+export type WorkCategory = 'Projects' | 'Certifications' | 'QA' | 'Fullstack';
+
 export interface WorkItem {
     title: string;
-    category: 'Projects' | 'Certifications';
+    category: WorkCategory[];
+    cardColor: 'green' | 'blue';
     startDate: string;
     endDate?: string;
     description: string;

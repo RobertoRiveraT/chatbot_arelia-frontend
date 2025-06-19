@@ -2,7 +2,8 @@ import { WorkItem } from '../../../work-item.interface';
 
 export const AminotecPlusWebsiteProject: WorkItem = {
     title: 'Aminotec Plus Website',
-    category: 'Projects',
+    category: ['Projects'],
+    cardColor: 'blue',
     startDate: '2020-08',
     endDate: '2020-08',
     description: 
@@ -14,7 +15,9 @@ export const AminotecPlusWebsiteProject: WorkItem = {
         '<strong>Product information</strong> includes downloadable PDF brochures',
         'Includes pages for <strong>products</strong>, <strong>about us</strong>, and <strong>contact</strong> (with <strong>Google Maps</strong> embeds)',
         'Assets organized into <strong>img/</strong>, <strong>font/</strong>, and <strong>css/</strong> directories',
-        'Built for a real-world <strong>Mexican agricultural company</strong>'
+        'Built for a real-world <strong>Mexican agricultural company</strong>',
+        'Deployed and <strong>hosted on GoDaddy</strong> as part of the project\'s real-world implementation'
+
     ],
     link: 'https://robertoriverat.github.io/Amonitecplus/index.html',
     thumbnail: 'assets/img/work/2020/aminotec_web_thumb.png',
