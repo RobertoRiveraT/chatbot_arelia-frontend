@@ -6,6 +6,7 @@ import { QaCertification } from './items/2025/certifications/qa.certification';
 // 2023
 // 2022
 // 2021
+import { TikTokCloneProject } from './items/2021/TikTokClone/tiktokclone.project';
 import { QuintaCarmelitaAppProject } from './items/2021/QuintaCarmelitaApp/quintacarmelita.project';
 import { HealthAppTecProject } from './items/2021/HealthApptec/healthapp.project';
 // 2020
@@ -23,6 +24,7 @@ export const workItems = [
     // 2023
     // 2022
     // 2021
+    TikTokCloneProject,
     HealthAppTecProject,
     QuintaCarmelitaAppProject,
     // 2020
