@@ -6,6 +6,8 @@ import { QaCertification } from './items/2025/certifications/qa.certification';
 // 2023
 // 2022
 // 2021
+import { QuintaCarmelitaAppProject } from './items/2021/QuintaCarmelitaApp/quintacarmelita.project';
+import { HealthAppTecProject } from './items/2021/HealthApptec/healthapp.project';
 // 2020
 import { AminotecPlusWebsiteProject } from './items/2020/AminotecPlus/webpage_aminotecplus.project';
 import { UnityPlatformerK } from './items/2020/UnityPlatformerK/unity_platformer_k.project';
@@ -21,6 +23,8 @@ export const workItems = [
     // 2023
     // 2022
     // 2021
+    HealthAppTecProject,
+    QuintaCarmelitaAppProject,
     // 2020
     AminotecPlusWebsiteProject,
     UnityPlatformerK,

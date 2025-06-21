@@ -4,7 +4,7 @@ export const AminotecPlusWebsiteProject: WorkItem = {
     title: 'Aminotec Plus Website',
     category: ['Projects'],
     cardColor: 'blue',
-    startDate: '2020-08',
+    startDate: '2020-06',
     endDate: '2020-08',
     description: 
         'Developed a static website for <strong>Aminotec Plus</strong>, a Mexican company specializing in <strong>amino acids</strong> and <strong>feed additives</strong> for <strong>poultry and livestock nutrition</strong>. The website includes multiple sections such as product listings, company information, and contact details, and features an <strong>image carousel</strong> on the homepage using <strong>Owl Carousel</strong>.',
