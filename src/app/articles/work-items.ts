@@ -5,6 +5,7 @@ import { QaCertification } from './items/2025/certifications/qa.certification';
 // 2024
 // 2023
 // 2022
+import { NFCDigitalWalletProject } from './items/2022/MusicQueuerNFC/musicqueuernfc.project';
 // 2021
 import { TikTokCloneProject } from './items/2021/TikTokClone/tiktokclone.project';
 import { QuintaCarmelitaAppProject } from './items/2021/QuintaCarmelitaApp/quintacarmelita.project';
@@ -23,6 +24,7 @@ export const workItems = [
     // 2024
     // 2023
     // 2022
+    NFCDigitalWalletProject,
     // 2021
     TikTokCloneProject,
     HealthAppTecProject,
