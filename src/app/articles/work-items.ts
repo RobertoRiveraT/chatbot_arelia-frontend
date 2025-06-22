@@ -5,6 +5,8 @@ import { QaCertification } from './items/2025/certifications/qa.certification';
 // 2024
 // 2023
 import { RedManFollowsProject } from './items/2023/RedManFollows/redmanfollows.project';
+// Certifications
+import { GoogleDataAnalyticsCertificate_1 } from './items/2023/certifications/cert_1_process_data_from_dirty_to_clean.project';
 // 2022
 import { NFCDigitalWalletProject } from './items/2022/MusicQueuerNFC/musicqueuernfc.project';
 // 2021
@@ -18,22 +20,25 @@ import { UnityPlatformerK } from './items/2020/UnityPlatformerK/unity_platformer
 import { Hi5WebsiteProject } from './items/2019/Hi5_Webpage/webpage_hi5.project';
 
 export const workItems = [
-    // 2025
+// 2025
     WebpagePortfolioProject,
     WebpageChatbotDemoProject,
-    QaCertification,
-    // 2024
-    // 2023
+        // Certifications
+        QaCertification,
+// 2024
+// 2023
     RedManFollowsProject,
-    // 2022
+        // Certifications
+        GoogleDataAnalyticsCertificate_1,
+// 2022
     NFCDigitalWalletProject,
-    // 2021
+// 2021
     TikTokCloneProject,
     HealthAppTecProject,
     QuintaCarmelitaAppProject,
-    // 2020
+// 2020
     AminotecPlusWebsiteProject,
     UnityPlatformerK,
-    // 2019
+// 2019
     Hi5WebsiteProject
 ];

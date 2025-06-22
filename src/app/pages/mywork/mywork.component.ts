@@ -29,6 +29,8 @@ export class MyworkComponent implements OnInit {
         this.selectedCategory = 'All';
       }
     });
+    // Ordenamos los items
+    this.allItems = this.allItems.sort((a, b) => b.startDate.localeCompare(a.startDate));
   }
 
   // Filtro seguro
