@@ -3,7 +3,7 @@ import { WorkItem } from '../../../work-item.interface';
 export const NFCDigitalWalletProject: WorkItem = {
     title: 'NFC-Based Digital Wallet System',
     category: ['Projects', 'Mobile'],
-    cardColor: 'green',
+    cardColor: 'blue',
     startDate: '2022-10',
     endDate: '2022-11',
     description: 

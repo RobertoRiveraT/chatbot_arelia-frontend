@@ -1,4 +1,4 @@
-export type WorkCategory = 'Projects' | 'Certifications' | 'QA' | 'Fullstack' | 'Mobile';
+export type WorkCategory = 'Projects' | 'Certifications' | 'QA' | 'Fullstack' | 'Mobile' | 'GameDev';
 
 export interface WorkItem {
     title: string;

@@ -4,6 +4,7 @@ import { WebpageChatbotDemoProject } from './items/2025/WebpagePortfolio/Chatbot
 import { QaCertification } from './items/2025/certifications/qa.certification';
 // 2024
 // 2023
+import { RedManFollowsProject } from './items/2023/RedManFollows/redmanfollows.project';
 // 2022
 import { NFCDigitalWalletProject } from './items/2022/MusicQueuerNFC/musicqueuernfc.project';
 // 2021
@@ -23,6 +24,7 @@ export const workItems = [
     QaCertification,
     // 2024
     // 2023
+    RedManFollowsProject,
     // 2022
     NFCDigitalWalletProject,
     // 2021
