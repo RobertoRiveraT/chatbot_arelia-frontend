@@ -5,8 +5,16 @@ import { QaCertification } from './items/2025/certifications/qa.certification';
 // 2024
 // 2023
 import { RedManFollowsProject } from './items/2023/RedManFollows/redmanfollows.project';
-// Certifications
-import { GoogleDataAnalyticsCertificate_1 } from './items/2023/certifications/cert_1_process_data_from_dirty_to_clean.project';
+    // Certifications
+    import { certification_process_data_from_dirty_to_clean } from './items/2023/certifications/process_data_from_dirty_to_clean.certification';
+    import { certification_prepare_data_for_exploration } from './items/2023/certifications/prepare_data_for_exploration.certification';
+    import { certification_analyze_data_to_answer_questions } from './items/2023/certifications/analize_data_to_asnwer_questions.certification';
+    import { certification_data_analysis_with_r_programming } from './items/2023/certifications/data_analysis_with_r_programming.certification';
+    import { certification_data_everywhere } from './items/2023/certifications/data_everywhere.certification';
+    import { certification_ask_questions_to_make_data_driven_decisions } from './items/2023/certifications/ask_questions_to_make_data_driven_decisions.certification';
+    import { certification_data_analytics_case_study } from './items/2023/certifications/data_analytics_case_study.certification';
+    import { certification_share_data_through_visualization } from './items/2023/certifications/share_data_through_visualization.certification';
+    import { GoogleDataAnalyticsProfessionalCertificate } from './items/2023/certifications/GoogleDataAnalyticsProfessionalCertificate.certification';
 // 2022
 import { NFCDigitalWalletProject } from './items/2022/MusicQueuerNFC/musicqueuernfc.project';
 // 2021
@@ -29,7 +37,15 @@ export const workItems = [
 // 2023
     RedManFollowsProject,
         // Certifications
-        GoogleDataAnalyticsCertificate_1,
+        GoogleDataAnalyticsProfessionalCertificate,
+        certification_process_data_from_dirty_to_clean,
+        certification_prepare_data_for_exploration,
+        certification_analyze_data_to_answer_questions,
+        certification_data_analysis_with_r_programming,
+        certification_data_everywhere,
+        certification_ask_questions_to_make_data_driven_decisions,
+        certification_data_analytics_case_study,
+        certification_share_data_through_visualization,
 // 2022
     NFCDigitalWalletProject,
 // 2021

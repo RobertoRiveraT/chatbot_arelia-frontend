@@ -1,6 +1,6 @@
 import { WorkItem } from '../../../work-item.interface';
 
-export const GoogleDataAnalyticsCertificate_1: WorkItem = {
+export const certification_process_data_from_dirty_to_clean: WorkItem = {
     title: 'Process Data from Dirty to Clean (Google Data Analytics)',
     category: ['Certifications'],
     cardColor: 'green',
