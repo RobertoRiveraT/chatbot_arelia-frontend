@@ -7,7 +7,7 @@ export const AreliaDiscordBotProject: WorkItem = {
     startDate: '2024-03',
     endDate: '2025-05',
     description:
-        'Designed and deployed AreliaBOT, an AI-powered Discord chatbot with dynamic personality, sentiment analysis, and community engagement capabilities. Developed as a freelance project to increase user interaction, retention, and emotional connection within large Spanish-speaking communities.',
+        'Designed and deployed AreliaBOT, an AI-powered Discord chatbot with dynamic personality, sentiment analysis, and community engagement capabilities. Developed as a freelance project to increase user interaction, retention, and emotional connection within large Spanish-speaking communities. Achieved over <strong>16,000 successful user interactions</strong> during its operational lifecycle.',
 
     readMoreText: 
         '<h2>Project Overview</h2>' + 
@@ -50,9 +50,7 @@ export const AreliaDiscordBotProject: WorkItem = {
         '<p>This pipeline provided full end-to-end testing and deployment control, reducing risks of introducing errors into production while supporting rapid feature development.</p>' +
 
         '<h2>Technologies Used</h2>' +
-        '<p><strong>Python 3.10+</strong>, <strong>Discord-Py</strong>, <strong>OpenAI GPT-4o</strong>, <strong>Firebase Realtime Database</strong>, <strong>VADER Sentiment Analyzer</strong>, <strong>Levenshtein Distance</strong>, <strong>Flask</strong>, <strong>Railway</strong>, <strong>Replit</strong>, <strong>Pytest</strong> (internal QA), <strong>GitHub</strong>, <strong>Persona-driven prompt engineering</strong>, <strong>AI-powered community building</strong>.</p>' +
-
-        '<h4 style="margin-top: 0.8rem; color: #007acc;">📁 <strong>Repository:</strong> <a href="https://github.com/RobertoRiveraT/AreliaBOT" target="_blank">View on GitHub</a></h4><br><br>',
+        '<p><strong>Python 3.10+</strong>, <strong>Discord-Py</strong>, <strong>OpenAI GPT-4o</strong>, <strong>Firebase Realtime Database</strong>, <strong>VADER Sentiment Analyzer</strong>, <strong>Levenshtein Distance</strong>, <strong>Flask</strong>, <strong>Railway</strong>, <strong>Replit</strong>, <strong>Pytest</strong> (internal QA), <strong>GitHub</strong>, <strong>Persona-driven prompt engineering</strong>, <strong>AI-powered community building</strong>.</p>',
 
     bullets: [
         '<strong>Personality-driven AI chatbot</strong> powered by <strong>OpenAI GPT-4o</strong> and modular dynamic prompts',
@@ -64,7 +62,7 @@ export const AreliaDiscordBotProject: WorkItem = {
         '<strong>Freelance project successfully deployed in production environments</strong>',
         '<strong>Operational lifecycle:</strong> Active in production from <strong>March 2024 to May 2025</strong>. Project concluded successfully after fulfilling its engagement objectives; client chose not to pursue further community expansion.'
     ],
-    link: 'https://www.linkedin.com/in/robertoriverateran/details/projects/1740201529525/single-media-viewer/?profileId=ACoAADI3EN0B1uWYdNdkBvLmf5_wr7D5vJtxDEo',
+    link: 'https://drive.google.com/file/d/1Da9byo2259xnZqHmnotLvVPPcj503hT_/view?usp=sharing',
     thumbnail: 'assets/img/work/2024/areliabot_web_thumb.png',
     readMoreOpen: false
 };
