@@ -4,7 +4,7 @@ export const introduction_to_software_testing: WorkItem = {
     title: 'Introduction to Software Testing',
     category: ['Certifications', 'QA'],
     cardColor: 'green',
-    startDate: '2025-06',
+    startDate: '2025-05',
     endDate: '2025-06',
     description:
         'Completed the <strong>Introduction to Software Testing</strong> course as part of the <strong>Software Testing and Automation Specialization</strong>. Gained a strong theoretical and practical foundation in software quality assurance, test planning, and automated testing methodologies using <strong>JUnit</strong> and test doubles.',

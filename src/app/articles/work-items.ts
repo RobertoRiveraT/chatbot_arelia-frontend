@@ -2,6 +2,7 @@
 import { WebpagePortfolioProject } from './items/2025/WebpagePortfolio/Webpage/webpage_portfolio.project';
 import { WebpageChatbotDemoProject } from './items/2025/WebpagePortfolio/ChatbotDemo/webpage_chatbot_demo.project';
 import { introduction_to_software_testing } from './items/2025/certifications/introduction_to_software_testing.certification';
+import { HerosWardenProject } from './items/2025/HerosWarden/heroswarden.project';
 // 2024
 import { AreliaDiscordBotProject } from './items/2024/AreliaDiscordBot/areliadiscordbot.project';
 // 2023
@@ -32,6 +33,7 @@ export const workItems = [
 // 2025
     WebpagePortfolioProject,
     WebpageChatbotDemoProject,
+    HerosWardenProject,
         // Certifications
         introduction_to_software_testing,
 // 2024

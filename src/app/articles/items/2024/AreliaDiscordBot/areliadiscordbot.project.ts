@@ -2,7 +2,7 @@ import { WorkItem } from '../../../work-item.interface';
 
 export const AreliaDiscordBotProject: WorkItem = {
     title: 'Arelia — AI-Powered Discord Chatbot (Freelance Project)',
-    category: ['Projects'],
+    category: ['Projects', 'QA'],
     cardColor: 'blue',
     startDate: '2024-03',
     endDate: '2025-05',

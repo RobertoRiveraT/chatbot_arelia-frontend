@@ -4,8 +4,8 @@ export const WebpageChatbotDemoProject: WorkItem = {
     title: 'Realtime Web Chatbot Demo (Fullstack + Automated Testing)',
     category: ['Projects', 'QA'],
     cardColor: 'blue',
-    startDate: '2024-05',
-    endDate: '2024-05',
+    startDate: '2025-06',
+    endDate: '2025-06',
     description: 
         'Designed and deployed a fullstack AI-powered chatbot system leveraging <strong>Angular</strong>, <strong>FastAPI</strong>, <strong>PostgreSQL</strong>, <strong>OpenAI API</strong>, and fully integrated <strong>automated testing pipelines</strong> using <strong>GitHub Actions</strong> and <strong>Pytest</strong>.',
 
