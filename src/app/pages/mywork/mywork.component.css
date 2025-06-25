@@ -87,9 +87,19 @@
 
 /* Certifications button - Green */
 .filter-btn:nth-child(3) {
+    background-color: #ffb347;
+}
+
+.filter-btn:nth-child(3):hover {
+    background-color: #ff9933;
+    transform: scale(1.05);
+}
+
+/* Certifications button - Orange */
+.filter-btn:nth-child(4) {
     background-color: #41e392;
 }
-.filter-btn:nth-child(3):hover {
+.filter-btn:nth-child(4):hover {
     background-color: #2aaf6e;
     transform: scale(1.05);
 }

@@ -1,8 +1,8 @@
 import { WorkItem } from '../../../work-item.interface';
 
 export const AminotecPlusWebsiteProject: WorkItem = {
-    title: 'Aminotec Plus Website',
-    category: ['Projects'],
+    title: 'Aminotec Plus Website (2020)',
+    category: ['Projects', 'QA'],
     cardColor: 'blue',
     startDate: '2020-06',
     endDate: '2020-08',

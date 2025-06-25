@@ -2,7 +2,7 @@ import { WorkItem } from '../../../work-item.interface';
 
 export const QuintaCarmelitaAppProject: WorkItem = {
     title: 'Quinta Carmelita Mobile App',
-    category: ['Projects', 'Mobile'],
+    category: ['Projects', 'Mobile', 'QA'],
     cardColor: 'blue',
     startDate: '2020-10',
     endDate: '2021-06',

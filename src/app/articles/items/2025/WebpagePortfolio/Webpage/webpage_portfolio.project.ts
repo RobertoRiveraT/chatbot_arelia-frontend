@@ -2,7 +2,7 @@ import { WorkItem } from '../../../../work-item.interface';
 
 export const WebpagePortfolioProject: WorkItem = {
     title: 'Personal Portfolio Website',
-    category: ['Projects'],
+    category: ['Projects', 'QA'],
     cardColor: 'blue',
     startDate: '2025-06',
     endDate: '2025-06',

@@ -1,8 +1,9 @@
 // 2025
 import { WebpagePortfolioProject } from './items/2025/WebpagePortfolio/Webpage/webpage_portfolio.project';
 import { WebpageChatbotDemoProject } from './items/2025/WebpagePortfolio/ChatbotDemo/webpage_chatbot_demo.project';
-import { QaCertification } from './items/2025/certifications/qa.certification';
+import { introduction_to_software_testing } from './items/2025/certifications/introduction_to_software_testing.certification';
 // 2024
+import { AreliaDiscordBotProject } from './items/2024/AreliaDiscordBot/areliadiscordbot.project';
 // 2023
 import { RedManFollowsProject } from './items/2023/RedManFollows/redmanfollows.project';
     // Certifications
@@ -32,8 +33,9 @@ export const workItems = [
     WebpagePortfolioProject,
     WebpageChatbotDemoProject,
         // Certifications
-        QaCertification,
+        introduction_to_software_testing,
 // 2024
+    AreliaDiscordBotProject,
 // 2023
     RedManFollowsProject,
         // Certifications
