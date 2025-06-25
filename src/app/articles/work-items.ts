@@ -3,9 +3,11 @@ import { WebpagePortfolioProject } from './items/2025/WebpagePortfolio/Webpage/w
 import { WebpageChatbotDemoProject } from './items/2025/WebpagePortfolio/ChatbotDemo/webpage_chatbot_demo.project';
 import { introduction_to_software_testing } from './items/2025/certifications/introduction_to_software_testing.certification';
 import { HerosWardenProject } from './items/2025/HerosWarden/heroswarden.project';
+import { GuessTheNumberFlutter } from './items/2025/GuessTheNumberFlutter/guessthenumberflutter.project';
 // 2024
 import { AreliaDiscordBotProject } from './items/2024/AreliaDiscordBot/areliadiscordbot.project';
 // 2023
+import { InmaProject } from './items/2023/Inma/inmaproject';
 import { RedManFollowsProject } from './items/2023/RedManFollows/redmanfollows.project';
     // Certifications
     import { certification_process_data_from_dirty_to_clean } from './items/2023/certifications/process_data_from_dirty_to_clean.certification';
@@ -34,11 +36,13 @@ export const workItems = [
     WebpagePortfolioProject,
     WebpageChatbotDemoProject,
     HerosWardenProject,
+    GuessTheNumberFlutter,
         // Certifications
         introduction_to_software_testing,
 // 2024
     AreliaDiscordBotProject,
 // 2023
+    InmaProject,
     RedManFollowsProject,
         // Certifications
         GoogleDataAnalyticsProfessionalCertificate,
