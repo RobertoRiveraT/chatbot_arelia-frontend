@@ -4,7 +4,7 @@
 
 ## 🧪 Problema
 
-Al intentar correr `ng serve` por primera vez en el proyecto `chatbot_arelia-frontend`, Angular compilaba casi todo, pero arrojaba errores tipo:
+Al intentar correr `ng serve` por primera vez en el proyecto `RRT Portfolio Webpage`, Angular compilaba casi todo, pero arrojaba errores tipo:
 
 ```
 TS2502: 'ReadableByteStreamController' is referenced directamente o indirectamente en su propia anotación de tipo.

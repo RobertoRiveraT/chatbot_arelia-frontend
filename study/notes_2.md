@@ -4,7 +4,7 @@
 
 ## ✅ Objetivo
 
-Configurar el frontend Angular (`chatbot_arelia-frontend`) para comunicarse correctamente con el backend FastAPI desplegado en Railway, utilizando la URL pública generada por Railway.
+Configurar el frontend Angular (`RRT Portfolio Webpage`) para comunicarse correctamente con el backend FastAPI desplegado en Railway, utilizando la URL pública generada por Railway.
 
 ---
 

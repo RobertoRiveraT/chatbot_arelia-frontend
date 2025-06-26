@@ -1,0 +1,131 @@
+.main-wrapper {
+    background-color: #dcf8ff;
+    position: relative;
+    min-height: 100dvh;
+    width: 100%;
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    text-align: center;
+    margin: 2rem auto 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+    background-color: #0056b3;
+}
+
+.about-site, .tutorial {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+.about-text {
+    min-width: 280px;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.about-photo {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;    /* centra horizontalmente */
+    align-items: center;        /* centra verticalmente */
+    height: 100%;               /* asegura que ocupe todo el alto de la fila */
+}
+
+.about-photo img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.about-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;  /* mantiene las columnas a la misma altura */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+    /*min-height: 600px;      🔧 Ajusta según sea necesario */
+}
+
+.about-left {
+    flex: 2;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+}
+
+.brand-section {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.brand-section h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #1ad8fa;
+}
+
+.brand-link {
+    display: inline-block;
+}
+
+.brand-logo {
+    width: 120px;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.2);
+    cursor: pointer;
+}

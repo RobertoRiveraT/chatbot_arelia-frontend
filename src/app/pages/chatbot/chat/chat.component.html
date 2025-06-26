@@ -1,0 +1,69 @@
+<div class="main-wrapper">
+<div class="content-wrapper">
+    <div class="chat-container">
+        <mat-card class="chat-box">
+        <mat-card-header class="chat-header">
+            <img mat-card-avatar src="assets/img/botpfp.png" alt="Bot Logo" />
+            <div class="chat-header-text">
+                <mat-card-title>Asistente Arelia</mat-card-title>
+                <mat-card-subtitle class="mat-cs">Conectado</mat-card-subtitle>
+            </div>
+        </mat-card-header>
+
+        <mat-card-content class="chat-messages" #scrollMe>
+            <div *ngFor="let message of messages" class="message" [ngClass]="{ 'bot': message.sender === 'bot', 'user': message.sender === 'user' }">
+            <div class="avatar">
+                <img *ngIf="message.sender === 'bot'" src="assets/img/botpfp.png" alt="Bot" />
+            </div>
+            <div class="bubble">
+                <div class="text">{{ message.text }}</div>
+                <div class="time">{{ message.timestamp | date:'shortTime' }}</div>
+            </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions class="chat-input">
+            <mat-form-field class="input-field" appearance="outline">
+                <input matInput placeholder="Escribe un mensaje..." [(ngModel)]="newMessage" (keydown.enter)="sendMessage()" />
+            </mat-form-field>
+            <button mat-icon-button color="primary" (click)="sendMessage()">
+                <mat-icon>send</mat-icon>
+            </button>
+        </mat-card-actions>
+        </mat-card>
+    </div>
+
+    
+    <div class="tutorials-container">
+        
+        <div class="tutorial-box blue-tutorial fade-in">
+            <h3>Meet Arelia ☕</h3>
+            <p>
+                Arelia is not your ordinary chatbot — she enjoys late-night coffee, has a sassy personality, and was built using Angular, FastAPI, and PostgreSQL.
+                While you're chatting, she's handling real-time communication with the backend through JWT-authenticated requests.
+            </p>
+        </div>
+
+        <!-- Tutorial Step 3 -->
+        <div class="tutorial-box fade-in">
+            <h3 style="font-size: 1.8rem; font-weight: 800;">Tutorial - Step 3: Chat Interaction</h3>
+            <p style="font-size: 0.9rem;">
+                After successful authentication, you're redirected to <code><strong>/chatbot/chat</strong></code>, where the chat interface loads.
+                A <strong>GET</strong> request is sent to <code><strong>/chat-history</strong></code> to retrieve your past conversation, allowing the bot to maintain context across sessions.
+            </p>
+            <p style="font-size: 0.9rem;">
+                When you send a message, the app makes a <strong>POST</strong> request to <code><strong>/chat</strong></code>, including your message and <strong>JWT</strong> in the <code>Authorization</code> header.
+                The backend verifies the token, links the message to your user ID, and passes it to the chatbot engine.
+                The engine builds a prompt using your message, full chat history, and the bot's predefined personality and knowledge, then sends it to the <strong>OpenAI API</strong>.
+            </p>
+            <p style="font-size: 0.9rem;">
+                The API's reply is stored along with your message, and both are returned and rendered in the chat view. 
+                You can later review all exchanges under the <code><strong>/account</strong></code> route.
+            </p>
+            <button class="next-step-btn" (click)="goToNextStep()">Next Step →</button>
+        </div>
+
+    </div>
+
+</div>
+</div>

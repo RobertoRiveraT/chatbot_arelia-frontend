@@ -1,0 +1,68 @@
+<div class="main-wrapper">
+<div class="content-wrapper">
+
+    <mat-card>
+        <h2>Account Management</h2>
+
+        <form [formGroup]="emailForm" (ngSubmit)="updateEmail()" class="section">
+            <h4>Update Email</h4>
+            <mat-form-field appearance="outline" class="full-width">
+            <mat-label>New Email</mat-label>
+            <input matInput formControlName="newEmail" type="email" />
+            <mat-error *ngIf="emailForm.get('newEmail')?.invalid && emailForm.get('newEmail')?.touched">
+                Invalid email
+            </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" [disabled]="emailForm.invalid">Update Email</button>
+        </form>
+
+        <form [formGroup]="passwordForm" (ngSubmit)="updatePassword()" class="section">
+            <h4>Update Password</h4>
+            <mat-form-field appearance="outline" class="full-width">
+            <mat-label>New Password</mat-label>
+            <input matInput formControlName="newPassword" type="password" />
+            <mat-error *ngIf="passwordForm.get('newPassword')?.invalid && passwordForm.get('newPassword')?.touched">
+                Minimum 6 characters
+            </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" [disabled]="passwordForm.invalid">Update Password</button>
+        </form>
+
+        <div class="section">
+            <h4>Delete Account</h4>
+            <button mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
+        </div>
+
+        <div *ngIf="updateMessage" style="margin-top: 16px; color: green;">
+            {{ updateMessage }}
+        </div>
+        <div *ngIf="errorMessage" style="margin-top: 16px; color: red;">
+            {{ errorMessage }}
+        </div>
+    </mat-card>
+
+    <!-- Tutorial Step 4 -->
+    <div class="tutorial-box fade-in">
+    <h3 style="font-size: 1.9rem; font-weight: 900;">Tutorial - Step 4: Account Management</h3>
+
+    <p style="font-size: 0.9rem;">
+        From the <code><strong>/account</strong></code> page, you can perform basic user <strong>CRUD</strong> operations:
+    </p>
+
+    <ul style="font-size: 0.88rem; margin-bottom: 1rem;">
+        <li>📧 <strong>Update Email:</strong> Sends a <code><strong>PUT</strong></code> request to <code><strong>/update-email</strong></code> with your new email and <strong>JWT</strong>.</li>
+        <li>🔐 <strong>Update Password:</strong> Sends a <code><strong>PUT</strong></code> request to <code><strong>/update-password</strong></code> with the new password. It's hashed before storage using <strong>bcrypt</strong>.</li>
+        <li>🗑️ <strong>Delete Account:</strong> Sends a <code><strong>DELETE</strong></code> request to <code><strong>/delete-account</strong></code>. The backend authenticates via <strong>JWT</strong> and deletes your user entry from the database.<br>
+        <span style="color: red; font-weight: bold;">⚠️ This will also permanently delete all messages exchanged with the chatbot in this account.</span>
+        </li>
+    </ul>
+
+    <p style="font-size: 0.9rem;">
+        These actions are authenticated using your <strong>JWT</strong> stored in <code><strong>localStorage</strong></code>. If the token is missing or invalid, the server will respond with an appropriate error.
+    </p>
+
+    <button class="next-step-btn" (click)="goToNextStep()">Finish →</button>
+    </div>
+
+</div>
+</div>
