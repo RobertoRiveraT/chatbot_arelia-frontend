@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'chatbot_arelia-frontend'`, () => {
+  it(`should have as title 'RRT Portfolio Webpage'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('chatbot_arelia-frontend');
+    expect(app.title).toEqual('RRT Portfolio Webpage');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('chatbot_arelia-frontend app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('RRT Portfolio Webpage app is running!');
   });
 });

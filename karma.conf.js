@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/chatbot_arelia-frontend'),
+      dir: require('path').join(__dirname, './coverage/RRT Portfolio Webpage'),
       subdir: '.',
       reporters: [
         { type: 'html' },

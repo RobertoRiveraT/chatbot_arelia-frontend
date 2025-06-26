@@ -1,0 +1,51 @@
+<div class="main-wrapper">
+<div class="content-wrapper">
+
+    <div class="carousel-container">
+        <div class="carousel-image-wrapper">
+            <img [src]="images[currentIndex]" [alt]="'Screenshot ' + (currentIndex + 1)" />
+
+            <button mat-icon-button class="arrow left" (click)="prevImage()" aria-label="Previous image">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+
+            <button mat-icon-button class="arrow right" (click)="nextImage()" aria-label="Next image">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
+
+        </div>
+    </div>
+
+    <div class="game-text-section fade-in">
+        <h2>Unity 2D Platformer</h2>
+        <p>
+            This is a Unity-based platformer created in 2020 as part of the university course "Video Game Development".
+            The project aimed to emulate the mechanics and gameplay style of the 
+            <strong><a href="https://youtu.be/IhWYW8FEFZ4?si=gknb-8NhbfVMXUNJ&t=497" target="_blank">Konoa</a></strong> series in 2D.
+        </p>
+        <h3>Controls</h3>
+        <p>
+            <strong>Move: </strong> → ← Arrow Keys
+            <br/>
+            <strong>Space: </strong> Jump
+            <br/>
+            <strong>Shoot: </strong> Z
+        </p>
+
+        <div class="button-group">
+            <a 
+                href="https://drive.google.com/file/d/1bzt2BxNahKL0DSuCFzNDwmjFqKOYQSCg/view?usp=drive_link" 
+                target="_blank" 
+                class="download-btn">
+                Download Game</a>
+            <a 
+                href="https://github.com/RobertoRiveraT/UnityPlatformerGame" 
+                target="_blank" 
+                class="repo-link-btn">
+                View Repository</a>
+        </div>
+
+    </div>
+
+</div>
+</div>

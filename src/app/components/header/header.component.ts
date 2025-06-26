@@ -12,9 +12,9 @@ export class HeaderComponent {
   goHome(): void {
     const token = localStorage.getItem('token');
     if (token) {
-      this.router.navigate(['/chat']);
+      this.router.navigate(['/home']);
     } else {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/home']);
     }
   }
 

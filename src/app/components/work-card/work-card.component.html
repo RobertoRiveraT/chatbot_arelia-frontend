@@ -1,0 +1,33 @@
+<div class="work-card" [ngClass]="cardColor">
+
+    <span class="date-label">{{ startDate }} to {{ endDate || 'Present' }}</span>
+    <h3 [innerHTML]="title"></h3>
+    <p [innerHTML]="description"></p>
+
+    <ul>
+        <li *ngFor="let bullet of bullets" [innerHTML]="bullet"></li>
+    </ul>
+
+    <p *ngIf="readMoreOpen && readMoreText" [innerHTML]="readMoreText" class="read-more-text"></p>
+
+    <div class="card-footer">
+        <a *ngIf="link" [href]="link" target="_blank" class="card-btn">View</a>
+        <button *ngIf="readMoreText" class="card-btn yellow" (click)="toggleReadMore()">
+            {{ readMoreOpen ? 'Read Less ▲' : 'Read More ▼' }}
+        </button>
+
+        <!-- Imagen miniatura -->
+        <img
+        *ngIf="thumbnail"
+        [src]="thumbnail"
+        alt="thumbnail"
+        class="thumbnail"
+        (click)="openImageModal()" />
+    </div>
+</div>
+
+<!-- Modal de imagen ampliada -->
+<div class="image-modal" *ngIf="isModalOpen" (click)="closeImageModal()">
+    <img [src]="thumbnail" alt="Expanded thumbnail" class="modal-image" />
+    <span class="close-btn" (click)="closeImageModal()">x</span>
+</div>
