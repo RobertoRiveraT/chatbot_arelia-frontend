@@ -195,8 +195,8 @@
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 0.6rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.3s ease;
