@@ -1,1 +1,1 @@
-window.__env = { baseUrl: 'https://backend-repo-qa-staging.up.railway.app' };
+window.__env = { baseUrl: 'https://chatbotarelia-backend-production.up.railway.app' };

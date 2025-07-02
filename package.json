@@ -10,6 +10,8 @@
     "prebuild": "node scripts/write-env.js",
     "build:qa-staging": "cross-env NODE_ENV=staging npm run prebuild && ng build --configuration=qa-staging",
     "build:production": "cross-env NODE_ENV=production npm run prebuild && ng build --configuration=production",
+    "serve:qa": "cross-env NODE_ENV=staging npm run prebuild && ng serve --configuration=qa-staging",
+    "serve:production": "cross-env NODE_ENV=production-local npm run prebuild && ng serve --configuration=production",
     "build:vercel": "node scripts/build.js"
   },
   "private": true,
