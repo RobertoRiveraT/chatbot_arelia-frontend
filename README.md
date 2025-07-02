@@ -25,7 +25,8 @@ frontend-webpage/
 | Environment | URL                                                                 |
 |-------------|---------------------------------------------------------------------|
 | Production  | [Production webpage](https://www.rrtportfolio.com)                  |
-| QA-Staging  | [QA Webpage](https://frontend-webpage-qa.vercel.app)                |
+| QA-Staging  | [QA Webpage](https://rrt-frontend-qa.vercel.app)                    |
+| Dev         | [Dev Webpage](https://rrt-frontend-dev.vercel.app)                  |
 
 ---
 
