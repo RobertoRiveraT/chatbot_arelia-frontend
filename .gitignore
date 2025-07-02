@@ -42,3 +42,6 @@ testem.log
 Thumbs.db
 .env.production
 .env.staging
+
+**/env.js
+src/assets/env.js
