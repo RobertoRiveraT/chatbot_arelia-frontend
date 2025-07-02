@@ -50,21 +50,25 @@ frontend-webpage/
 |------------|------------------------------------------|
 | BASE_URL   | Dynamically injected backend API URL     |
 
-### Generated File
+### 📁 Generated File
 
-`src/environments/env.js` → created via `scripts/write-env.js`.
+`src/assets/env.js` → created via `scripts/write-env.js`.
 
-### Example `.env`
+> In **local development**, `env.js` is generated based on the environment (`.env.production`, `.env.staging`, etc).
 
-```env
-# .env (production)
+> In **Vercel production builds**, `env.js` is skipped and environment variables are read directly from Vercel settings.
+
+### ✅ Example `.env` Files
+
+```
+# .env.production
 BASE_URL=https://production.backend.url
 
-# .env.staging (QA)
+# .env.staging
 BASE_URL=https://qa.backend.url
 ```
 
-> These files are ignored by Git and must be manually configured.
+These files are **ignored by Git**.
 
 ---
 
@@ -73,21 +77,40 @@ BASE_URL=https://qa.backend.url
 ### 🛠️ Local Development
 
 ```bash
-npm install
-ts-node scripts/write-env.ts && ng serve
+# QA-Staging mode
+npm run serve:qa
+
+# Production mode (with local env.js)
+npm run serve:production
 ```
 
 ### 🧪 QA-Staging Build
 
 ```bash
-ts-node scripts/write-env.ts && ng build --configuration=qa-staging
+npm run build:qa-staging
 ```
 
 ### 🏭 Production Build
 
 ```bash
-ts-node scripts/write-env.ts && ng build --configuration=production
+npm run build:production
 ```
+
+---
+
+## ⚙️ Build Script Behavior
+
+The `scripts/write-env.js` will skip generating `env.js` if `NODE_ENV=production` to avoid exposing variables in Vercel builds.
+
+In local dev:
+```bash
+NODE_ENV=production-local npm run serve:production
+
+or
+
+NODE_ENV=staging npm run serve:staging
+```
+It will still generate `env.js` using `.env.production` or `.env.staging` depending on what will be tested.
 
 ---
 
@@ -96,7 +119,7 @@ ts-node scripts/write-env.ts && ng build --configuration=production
 - **QA-Staging** → triggered on `qa-staging` branch push.
 - **Production** → triggered on `main` branch push.
 
-Environment variables are set via Vercel settings.
+Environment variables are injected automatically via Vercel.
 
 ---
 
@@ -104,9 +127,9 @@ Environment variables are set via Vercel settings.
 
 | Branch         | Purpose                      |
 |----------------|------------------------------|
-| `dev`          | Active development            |
-| `qa-staging`   | QA testing deployments        |
-| `main`         | Production releases           |
+| `dev`          | Active development           |
+| `qa-staging`   | QA testing deployments       |
+| `main`         | Production releases          |
 
 ---
 

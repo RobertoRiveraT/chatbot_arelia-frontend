@@ -6,7 +6,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
-const BASE_URL = environment.baseUrl;
+declare global {
+    interface Window {
+        __env?: {
+            baseUrl?: string;
+        };
+    }
+}
+
+const BASE_URL = window?.__env?.baseUrl || environment.baseUrl;
 
 @Injectable({
 providedIn: 'root'
