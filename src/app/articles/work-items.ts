@@ -6,6 +6,7 @@ import { HerosWardenProject } from './items/2025/HerosWarden/heroswarden.project
 import { GuessTheNumberFlutter } from './items/2025/GuessTheNumberFlutter/guessthenumberflutter.project';
 // 2024
 import { AreliaDiscordBotProject } from './items/2024/AreliaDiscordBot/areliadiscordbot.project';
+import { PenguinTwitchBattleProject } from './items/2024/PenguinTwitchBattle/penguintwitchbattle.project';
 // 2023
 import { InmaProject } from './items/2023/Inma/inmaproject';
 import { RedManFollowsProject } from './items/2023/RedManFollows/redmanfollows.project';
@@ -41,6 +42,7 @@ export const workItems = [
         introduction_to_software_testing,
 // 2024
     AreliaDiscordBotProject,
+    PenguinTwitchBattleProject,
 // 2023
     InmaProject,
     RedManFollowsProject,
