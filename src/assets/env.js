@@ -1,1 +1,0 @@
-window.__env = { baseUrl: 'https://chatbotarelia-backend-production.up.railway.app' };
