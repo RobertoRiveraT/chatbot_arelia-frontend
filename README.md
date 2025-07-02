@@ -24,8 +24,8 @@ frontend-webpage/
 
 | Environment | URL                                                                 |
 |-------------|---------------------------------------------------------------------|
-| Production  | [Production webpage](https://chatbot-arelia-frontend.vercel.app)   |
-| QA-Staging  | [QA Webpage](https://frontend-webpage-qa.vercel.app)              |
+| Production  | [Production webpage](https://www.rrtportfolio.com)                  |
+| QA-Staging  | [QA Webpage](https://frontend-webpage-qa.vercel.app)                |
 
 ---
 
