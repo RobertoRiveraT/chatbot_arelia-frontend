@@ -40,7 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
 .env.production
+.env.production-local
 .env.staging
 
 **/env.js

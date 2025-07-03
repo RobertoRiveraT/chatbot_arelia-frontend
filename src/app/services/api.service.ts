@@ -14,7 +14,6 @@ declare global {
     }
 }
 
-const BASE_URL = window?.__env?.baseUrl || environment.baseUrl;
 
 @Injectable({
 providedIn: 'root'
@@ -23,9 +22,13 @@ export class ApiService {
 
     constructor(private http: HttpClient) {}
 
+    private get BASE_URL(): string {
+        return window?.__env?.baseUrl || environment.baseUrl;
+    }
+
     // Registro de usuario
     register(email: string, password: string): Observable<any> {
-        return this.http.post(`${BASE_URL}/register`, { email, password });
+        return this.http.post(`${this.BASE_URL}/register`, { email, password });
     }
 
     // Login y almacenamiento del token
@@ -39,7 +42,7 @@ export class ApiService {
         });
 
         return new Observable(observer => {
-        this.http.post(`${BASE_URL}/login`, body.toString(), { headers }).subscribe({
+        this.http.post(`${this.BASE_URL}/login`, body.toString(), { headers }).subscribe({
             next: (res: any) => {
             localStorage.setItem('token', res.access_token);
             observer.next(res);
@@ -52,7 +55,7 @@ export class ApiService {
 
     updateEmail(newEmail: string): Observable<any> {
         const token = localStorage.getItem('token');
-        return this.http.put(`${BASE_URL}/update-email`, { new_email: newEmail }, {
+        return this.http.put(`${this.BASE_URL}/update-email`, { new_email: newEmail }, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -61,7 +64,7 @@ export class ApiService {
 
     updatePassword(newPassword: string): Observable<any> {
         const token = localStorage.getItem('token');
-        return this.http.put(`${BASE_URL}/update-password`, { new_password: newPassword }, {
+        return this.http.put(`${this.BASE_URL}/update-password`, { new_password: newPassword }, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -70,7 +73,7 @@ export class ApiService {
 
     deleteAccount(): Observable<any> {
         const token = localStorage.getItem('token');
-        return this.http.delete(`${BASE_URL}/delete-account`, {
+        return this.http.delete(`${this.BASE_URL}/delete-account`, {
         headers: {
             Authorization: `Bearer ${token}`
         }
@@ -85,7 +88,7 @@ export class ApiService {
         'Authorization': `Bearer ${token}`
         });
 
-        return this.http.post(`${BASE_URL}/chat`, { content }, { headers });
+        return this.http.post(`${this.BASE_URL}/chat`, { content }, { headers });
     }
 
     // Obtener historial (si se implementa en el backend)
@@ -95,19 +98,19 @@ export class ApiService {
         'Authorization': `Bearer ${token}`
         });
 
-        return this.http.get(`${BASE_URL}/messages`, { headers });
+        return this.http.get(`${this.BASE_URL}/messages`, { headers });
         }
 
     getChatHistory(): Observable<any> {
         const token = localStorage.getItem('token');
-        return this.http.get(`${BASE_URL}/chat-history`, {
+        return this.http.get(`${this.BASE_URL}/chat-history`, {
         headers: { Authorization: `Bearer ${token}` }
         });
     }
 
     sendMessageToBot(message: string): Observable<any> {
         const token = localStorage.getItem('token');
-        return this.http.post(`${BASE_URL}/chat`, { content: message }, {
+        return this.http.post(`${this.BASE_URL}/chat`, { content: message }, {
         headers: { Authorization: `Bearer ${token}` }
         });
     }
