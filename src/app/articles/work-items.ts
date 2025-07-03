@@ -1,4 +1,5 @@
 // 2025
+import { AminotecWebRedesign } from './items/2025/AminotecplusNextjsWebpage/aminotecplusnextjs.project';
 import { WebpagePortfolioProject } from './items/2025/WebpagePortfolio/Webpage/webpage_portfolio.project';
 import { WebpageChatbotDemoProject } from './items/2025/WebpagePortfolio/ChatbotDemo/webpage_chatbot_demo.project';
 import { introduction_to_software_testing } from './items/2025/certifications/introduction_to_software_testing.certification';
@@ -31,9 +32,11 @@ import { AminotecPlusWebsiteProject } from './items/2020/AminotecPlus/webpage_am
 import { UnityPlatformerK } from './items/2020/UnityPlatformerK/unity_platformer_k.project';
 // 2019
 import { Hi5WebsiteProject } from './items/2019/Hi5_Webpage/webpage_hi5.project';
+import { HackMTY2019Award } from './items/2019/HackMX2019/hackmx2019.project';
 
 export const workItems = [
 // 2025
+AminotecWebRedesign,
     WebpagePortfolioProject,
     WebpageChatbotDemoProject,
     HerosWardenProject,
@@ -66,5 +69,6 @@ export const workItems = [
     AminotecPlusWebsiteProject,
     UnityPlatformerK,
 // 2019
-    Hi5WebsiteProject
+    Hi5WebsiteProject,
+    HackMTY2019Award
 ];
