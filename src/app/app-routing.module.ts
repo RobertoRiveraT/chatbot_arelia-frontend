@@ -19,7 +19,7 @@ import { UnityPlatformerComponent } from './pages/games/unity-platformer/unity-p
 import { PenguinTwitchBattleComponent } from './pages/games/penguin-twitch-battle/penguin-twitch-battle.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   // Navegation
   { path: 'home', component: HomeComponent },
   { path: 'aboutme', component: AboutmeComponent },
@@ -32,7 +32,8 @@ const routes: Routes = [
   { path: 'chatbot/account', component: AccountComponent },
   { path: 'chatbot/chat', component: ChatComponent },
   // Games
-  { path: 'games/unity-platformer', component: UnityPlatformerComponent }
+  { path: 'games/unity-platformer', component: UnityPlatformerComponent },
+  { path: '**', redirectTo: 'home' } // opcional: redirige rutas no válidas
 ];
 
 @NgModule({
