@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+
+  menuOpen = false;
+
+  constructor(private router: Router) {
+    // Cierra el menú automáticamente al cambiar de ruta
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.menuOpen = false;
+      }
+    });
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  goTo(route: string): void {
+    this.router.navigate([route]);
+    this.menuOpen = false;
+  }
 
   goHome(): void {
     const token = localStorage.getItem('token');
@@ -25,10 +44,12 @@ export class HeaderComponent {
     } else {
       this.router.navigate(['/login']);
     }
+    this.menuOpen = false;
   }
 
   logout(): void {
     localStorage.removeItem('token');
     this.router.navigate(['/login']);
+    this.menuOpen = false;
   }
 }

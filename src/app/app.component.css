@@ -16,3 +16,9 @@ body {
     align-items: center;
     height: 64px;
 }
+
+@media (max-width: 768px) {
+    main {
+        margin-left: 0;
+    }
+}
