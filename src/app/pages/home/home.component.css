@@ -4,17 +4,18 @@
     background: linear-gradient(to right, #1ad8fa, #e6f7ff);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 💡 esto es la clave */
+    justify-content: space-between; 
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
 }
 
 .hero-container {
-    margin-top: 6rem;
+    flex: 1;
     padding-left: 5vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     z-index: 1;
 }
 
@@ -74,13 +75,15 @@
 
 @media (max-width: 768px) {
     .main-wrapper {
-        height: 100dvh;
+        height: 90dvh;
     }
 
     .hero-container {
         padding: 1rem;
         align-items: center;
         text-align: center;
+        justify-content: center;
+        flex: 1;
     }
 
     .hero-name {
@@ -90,6 +93,10 @@
     .hero-subtitle {
         font-size: 1.3rem;
         margin: 0.4rem 0;
+    }
+
+    .footer {
+        flex-shrink: 0;
     }
 }
 

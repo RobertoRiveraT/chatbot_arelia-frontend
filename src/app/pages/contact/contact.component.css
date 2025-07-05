@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;    /* centra horizontalmente */
     align-items: center;        /* centra verticalmente */
+    font-family: 'Roboto', sans-serif;
 }
 
 :host {
@@ -89,4 +90,12 @@
 
 .icon-link:hover .social-icon {
     fill: rgb(38, 0, 255); /* color al hacer hover */
+}
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        /* 160px es mas o menos el tamaño del navbar en movil */
+        height: calc(100dvh - 160px);
+        min-height: auto;
+    }
 }
