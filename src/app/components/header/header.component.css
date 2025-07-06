@@ -68,6 +68,15 @@
   color: red;
 }
 
+.nav a.account-link {
+  color: #41e392; /* verde suave */
+}
+
+.nav a.account-link:hover,
+.nav a.account-link.active {
+  color: #2aaf6e;
+}
+
 .social {
   display: flex;
   gap: 1rem;

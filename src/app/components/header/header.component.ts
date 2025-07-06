@@ -9,6 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HeaderComponent {
 
   menuOpen = false;
+  public isLoggedIn: boolean = false;
 
   constructor(private router: Router) {
     // Cierra el menú automáticamente al cambiar de ruta
@@ -16,6 +17,7 @@ export class HeaderComponent {
       if (event instanceof NavigationEnd) {
         this.menuOpen = false;
       }
+      this.isLoggedIn = !!localStorage.getItem('token');
     });
   }
 
@@ -40,16 +42,10 @@ export class HeaderComponent {
   goToAccount(): void {
     const token = localStorage.getItem('token');
     if (token) {
-      this.router.navigate(['/account']);
+      this.router.navigate(['/chatbot/account']);
     } else {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/chatbot/login']);
     }
-    this.menuOpen = false;
-  }
-
-  logout(): void {
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
     this.menuOpen = false;
   }
 }

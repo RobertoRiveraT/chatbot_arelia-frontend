@@ -23,6 +23,7 @@
         <nav class="nav">
             <a routerLink="/mywork" routerLinkActive="active">WORK</a>
             <a routerLink="/chatbot" routerLinkActive="active" class="chatbot-link">CHATBOT DEMO</a>
+            <a *ngIf="isLoggedIn" routerLink="/chatbot/account" routerLinkActive="active" class="account-link">ACCOUNT</a>
             <a routerLink="/aboutme" routerLinkActive="active">ABOUT ME</a>
             <a routerLink="/contact" routerLinkActive="active">CONTACT</a>
         </nav>

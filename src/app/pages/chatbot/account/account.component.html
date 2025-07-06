@@ -33,6 +33,12 @@
             <button mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
         </div>
 
+        <!-- Log Out Button -->
+        <div style="margin-top: 1rem;">
+            <h4>Log Out</h4>
+            <button mat-raised-button color="accent" (click)="logout()">Log Out</button>
+        </div>
+
         <div *ngIf="updateMessage" style="margin-top: 16px; color: green;">
             {{ updateMessage }}
         </div>

@@ -87,5 +87,10 @@ export class AccountComponent {
       this.router.navigate(['/chatbot/login']);
     }
   }
-  
+
+  logout(): void {
+    localStorage.removeItem('token');
+    this.router.navigate(['/chatbot/login']);
+  }
+
 }
