@@ -130,6 +130,7 @@ mat-card {
     .main-wrapper {
         margin-top: 160px;
     }
+
     .custom-card {
         width: none;
         margin: none;
@@ -141,4 +142,5 @@ mat-card {
         padding:  none;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
 }
