@@ -17,7 +17,7 @@
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero p {
@@ -61,7 +61,6 @@
     display: flex;
     justify-content: center;    /* centra horizontalmente */
     align-items: center;        /* centra verticalmente */
-    height: 100%;               /* asegura que ocupe todo el alto de la fila */
 }
 
 .about-photo img {
@@ -129,3 +128,48 @@
     filter: brightness(1.2);
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-layout {
+        flex: 1;
+        flex-direction: column;
+        padding: 1.25rem;
+        margin: 0 auto;
+        gap: 1.5rem;
+    }
+
+    .about-left,
+    .about-photo {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-photo {
+        height: auto;
+        padding-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about-text {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .brand-logo {
+        width: 100px;
+    }
+}
+

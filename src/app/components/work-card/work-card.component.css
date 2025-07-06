@@ -178,7 +178,7 @@
 
 .work-card ul {
     padding-left: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     font-size: 1rem;
 }
 
@@ -258,4 +258,50 @@
     0% { transform: scale(1); }
     50% { transform: scale(1.08); }
     100% { transform: scale(1); }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+
+    .cv-cards-wrapper {
+        padding: 0rem;
+    }
+
+    .work-card {
+        width: auto;
+        padding: none;
+    }
+
+    .work-card h3 {
+        font-size: 1.3rem;
+        margin-top: 1.75rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .work-card p,
+    .work-card ul {
+        font-size: 0.95rem;
+    }
+
+    .work-card ul li {
+        margin-bottom: 1rem; /* más espacio en móvil para legibilidad */
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .card-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .thumbnail {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
 }

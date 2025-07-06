@@ -237,3 +237,43 @@
     50% { transform: scale(1.08); }
     100% { transform: scale(1); }
 }
+
+/* === Scroll to Top Button === */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #1ad8fa;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0.75rem 1.25rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+    background-color: #007acc;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .scroll-top-btn {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .cv-cards-wrapper {
+        padding: 0rem;
+    }
+
+}

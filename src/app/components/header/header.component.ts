@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +7,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+
+  menuOpen = false;
+  public isLoggedIn: boolean = false;
+
+  constructor(private router: Router) {
+    // Cierra el menú automáticamente al cambiar de ruta
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.menuOpen = false;
+      }
+      this.isLoggedIn = !!localStorage.getItem('token');
+    });
+  }
+
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  goTo(route: string): void {
+    this.router.navigate([route]);
+    this.menuOpen = false;
+  }
 
   goHome(): void {
     const token = localStorage.getItem('token');
@@ -21,14 +42,10 @@ export class HeaderComponent {
   goToAccount(): void {
     const token = localStorage.getItem('token');
     if (token) {
-      this.router.navigate(['/account']);
+      this.router.navigate(['/chatbot/account']);
     } else {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/chatbot/login']);
     }
-  }
-
-  logout(): void {
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+    this.menuOpen = false;
   }
 }
