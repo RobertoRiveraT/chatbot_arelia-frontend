@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { workItems } from '../../articles/work-items';
 import { WorkCategory } from '../../articles/work-item.interface';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,6 +12,7 @@ export class MyworkComponent implements OnInit {
   // Tipo seguro para categorías
   selectedCategory: WorkCategory | 'All' = 'All';
   allItems = workItems;
+  showScrollTop = false;
 
   // Lista de categorías para generar los botones de filtro
   categories: Array<WorkCategory | 'All'> = ['All', 'Projects', 'Certifications', 'QA', 'Fullstack'];
@@ -57,5 +58,14 @@ export class MyworkComponent implements OnInit {
 
   toggleReadMore(item: any): void {
     item.readMoreOpen = !item.readMoreOpen;
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.showScrollTop = window.scrollY > 300;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

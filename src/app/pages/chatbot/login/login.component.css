@@ -107,6 +107,12 @@ mat-card {
     transform: scale(1.05);
 }
 
+.custom-card {
+    max-width: 400px;
+    margin: 100px auto 0 auto;
+}
+
+
 /* Heartbeat / pulse animation */
 @keyframes pulse {
     0% {
@@ -118,4 +124,23 @@ mat-card {
     100% {
         transform: scale(1);
     }
+}
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        margin-top: 160px;
+    }
+
+    .custom-card {
+        width: none;
+        margin: none;
+    }
+
+    mat-card {
+        width: auto;
+        max-width: auto;
+        padding:  none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
 }

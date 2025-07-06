@@ -1,8 +1,21 @@
-<aside class="sidebar fade-in">
+<aside class="sidebar fade-in" [class.menu-open]="menuOpen">
+
+    <!-- Mobile logo + hamburger -->
+    <div class="mobile-header mobile-only">
+        <div class="logo" (click)="goHome()">
+            <img src="assets/img/icon2.png" alt="Logo" />
+        </div>
+        <div class="hamburger" (click)="toggleMenu()">
+            <div class="bar1" [class.change]="menuOpen"></div>
+            <div class="bar2" [class.change]="menuOpen"></div>
+            <div class="bar3" [class.change]="menuOpen"></div>
+        </div>
+    </div>
+
     <!-- Container for logo + nav + social -->
     <div class="sidebar-content">
-        <!-- Logo / Home -->
-        <div class="logo" (click)="goHome()">
+        <!-- Logo / Home (solo visible en desktop) -->
+        <div class="logo desktop-only" (click)="goHome()">
             <img src="assets/img/icon2.png" alt="Logo" />
         </div>
 
@@ -10,6 +23,7 @@
         <nav class="nav">
             <a routerLink="/mywork" routerLinkActive="active">WORK</a>
             <a routerLink="/chatbot" routerLinkActive="active" class="chatbot-link">CHATBOT DEMO</a>
+            <a *ngIf="isLoggedIn" routerLink="/chatbot/account" routerLinkActive="active" class="account-link">ACCOUNT</a>
             <a routerLink="/aboutme" routerLinkActive="active">ABOUT ME</a>
             <a routerLink="/contact" routerLinkActive="active">CONTACT</a>
         </nav>
