@@ -38,7 +38,7 @@ export class ChatComponent implements OnInit {
       next: (res) => {
         this.messages = res.map((msg: any) => ({
           sender: msg.role === 'assistant' ? 'bot' : 'user',
-          text: msg.content,
+          text: this.linkify(msg.content),
           timestamp: new Date(msg.timestamp)
         }));
         setTimeout(() => this.scrollToBottom(), 100);
@@ -55,7 +55,7 @@ export class ChatComponent implements OnInit {
 
     const userMsg: ChatMessage = {
       sender: 'user',
-      text: content,
+      text: this.linkify(content),
       timestamp: new Date()
     };
     this.messages.push(userMsg);
@@ -63,11 +63,12 @@ export class ChatComponent implements OnInit {
     this.scrollToBottom();
 
     this.loading = true;
+
     this.api.sendMessageToBot(content).subscribe({
       next: (res) => {
         const botMsg: ChatMessage = {
           sender: res.role === 'assistant' ? 'bot' : 'user',
-          text: res.content,
+          text: this.linkify(res.content),
           timestamp: new Date(res.timestamp)
         };
         this.messages.push(botMsg);
@@ -78,6 +79,18 @@ export class ChatComponent implements OnInit {
         console.error('Error sending message:', err);
         this.loading = false;
       }
+    });
+  }
+
+  private linkify(text: string): string {
+    const urlRegex = /((https?:\/\/)|(www\.))[^\s]+/g;
+    return text.replace(urlRegex, (url) => {
+      let fullUrl = url;
+      if (!url.startsWith('http')) {
+        fullUrl = 'https://' + url;
+      }
+      const display = url.replace(/^https?:\/\//, '');
+      return `<a href="${fullUrl}" target="_blank" rel="noopener noreferrer">${display}</a>`;
     });
   }
 

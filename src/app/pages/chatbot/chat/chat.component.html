@@ -15,10 +15,10 @@
             <div class="avatar">
                 <img *ngIf="message.sender === 'bot'" src="assets/img/botpfp.png" alt="Bot" />
             </div>
-            <div class="bubble">
-                <div class="text">{{ message.text }}</div>
-                <div class="time">{{ message.timestamp | date:'shortTime' }}</div>
-            </div>
+                <div class="bubble">
+                    <div class="text" [innerHTML]="message.text"></div>
+                    <div class="time">{{ message.timestamp | date:'shortTime' }}</div>
+                </div>
             </div>
         </mat-card-content>
 
